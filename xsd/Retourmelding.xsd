@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:str="http://www.sivi.org/Verzuimmanagement/Retourmelding/2019" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sivi.org/Verzuimmanagement/Retourmelding/2019" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2019.1">
-	<xsd:element name="Message">
+<xsd:schema xmlns:str="http://www.sivi.org/Verzuimmanagement/Retourmelding/2020" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sivi.org/Verzuimmanagement/Retourmelding/2020" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.1">
+	<xsd:element name="Retourmelding">
 		<xsd:complexType>
 			<xsd:sequence>
 				<xsd:element name="BrAlg">
@@ -18,13 +18,14 @@
 								<xsd:simpleType>
 									<xsd:restriction base="xsd:string">
 										<xsd:maxLength value="5"/>
-										<xsd:enumeration value="00001"/>
+										<xsd:enumeration value="00002"/>
 									</xsd:restriction>
 								</xsd:simpleType>
 							</xsd:element>
 							<xsd:element name="AandatBr" type="xsd:date"/>
 							<xsd:element name="AantijdBr" type="xsd:time"/>
 							<xsd:element name="IdInzndr" type="str:IdentificatieInzender"/>
+							<xsd:element name="GebrSwPakket" type="str:Tekst35"/>
 							<xsd:element name="IdOntvngr" type="str:IdentificatieOntvanger"/>
 							<xsd:element name="Berrefnr" type="str:Berichtreferentienummer"/>
 							<xsd:element name="BerrefnrIngzndnBer" type="str:Berichtreferentienummer"/>
@@ -97,6 +98,11 @@
 			<xsd:enumeration value="02"/>
 			<xsd:enumeration value="03"/>
 			<xsd:enumeration value="04"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Tekst35">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="35"/>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="Toelichting">

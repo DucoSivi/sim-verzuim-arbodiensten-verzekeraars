@@ -1,10 +1,11 @@
-# Berichten Arbodiensten ↔ Verzekeraars 2019
+# Berichten Arbodiensten ↔ Verzekeraars 2020
 
 | Bericht | Schema | Elementen |
 |---|---|---|
-| [Rapportage Arbodiensten - Verzekeraars](RapportageArbodienst-Verzekeraar.md) | [`RapportageArbodienst-Verzekeraar.xsd`](../xsd/RapportageArbodienst-Verzekeraar.xsd) | 70 |
-| [Retourmelding](Retourmelding.md) | [`Retourmelding.xsd`](../xsd/Retourmelding.xsd) | 16 |
-| [Uitwisselen Koppelcontractgegevens](UitwisselenKoppelcontractgegevens.md) | [`UitwisselenKoppelcontractgegevens.xsd`](../xsd/UitwisselenKoppelcontractgegevens.xsd) | 179 |
-| [Verzuimmelding Arbodiensten - Verzekeraars](VerzuimmeldingenArbodienst-Verzekeraar.md) | [`VerzuimmeldingenArbodienst-Verzekeraar.xsd`](../xsd/VerzuimmeldingenArbodienst-Verzekeraar.xsd) | 167 |
-| [Verzuimmelding Verzekeraars - Arbodiensten](VerzuimmeldingenVerzekeraar-Arbodienst.md) | [`VerzuimmeldingenVerzekeraar-Arbodienst.xsd`](../xsd/VerzuimmeldingenVerzekeraar-Arbodienst.xsd) | 167 |
-| [Verzuimrapportage Arbodiensten - Verzekeraars](VerzuimrapportageArbodienst-Verzekeraar.md) | [`VerzuimrapportageArbodienst-Verzekeraar.xsd`](../xsd/VerzuimrapportageArbodienst-Verzekeraar.xsd) | 89 |
+| [Aanvraag preventieve diensten verzekeraar](AanvraagPreventieveDienstenVerzekeraar.md) | [`AanvraagPreventieveDienstenVerzekeraar.xsd`](../xsd/AanvraagPreventieveDienstenVerzekeraar.xsd) | 110 |
+| [Rapportage Arbodiensten - Verzekeraars](RapportageArbodienst-Verzekeraar.md) | [`RapportageArbodienst-Verzekeraar.xsd`](../xsd/RapportageArbodienst-Verzekeraar.xsd) | 71 |
+| [Retourmelding](Retourmelding.md) | [`Retourmelding.xsd`](../xsd/Retourmelding.xsd) | 17 |
+| [Uitwisselen Koppelcontractgegevens](UitwisselenKoppelcontractgegevens.md) | [`UitwisselenKoppelcontractgegevens.xsd`](../xsd/UitwisselenKoppelcontractgegevens.xsd) | 178 |
+| [Verzuimmelding Arbodiensten - Verzekeraars](VerzuimmeldingenArbodienst-Verzekeraar.md) | [`VerzuimmeldingenArbodienst-Verzekeraar.xsd`](../xsd/VerzuimmeldingenArbodienst-Verzekeraar.xsd) | 163 |
+| [Verzuimmelding Verzekeraars - Arbodiensten](VerzuimmeldingenVerzekeraar-Arbodienst.md) | [`VerzuimmeldingenVerzekeraar-Arbodienst.xsd`](../xsd/VerzuimmeldingenVerzekeraar-Arbodienst.xsd) | 165 |
+| [Verzuimrapportage Arbodiensten - Verzekeraars](VerzuimrapportageArbodienst-Verzekeraar.md) | [`VerzuimrapportageArbodienst-Verzekeraar.xsd`](../xsd/VerzuimrapportageArbodienst-Verzekeraar.xsd) | 90 |
