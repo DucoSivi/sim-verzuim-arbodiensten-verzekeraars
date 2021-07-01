@@ -1,12 +1,12 @@
 # Retourmelding
 
-Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2020.
+Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2021.
 
 | | |
 |---|---|
 | Schema | [`xsd/Retourmelding.xsd`](../xsd/Retourmelding.xsd) |
-| Namespace | `http://www.sivi.org/Verzuimmanagement/Retourmelding/2020` |
-| Versie | 1.1 |
+| Namespace | `http://www.sivi.org/Verzuimmanagement/Retourmelding/2021` |
+| Versie | 2021.0 |
 | Elementen | 17 |
 
 Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchie; de volledige toelichting per element staat in de PDF bij de release.

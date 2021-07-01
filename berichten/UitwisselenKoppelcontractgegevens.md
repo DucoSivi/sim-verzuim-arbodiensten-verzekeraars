@@ -1,12 +1,12 @@
 # Uitwisselen Koppelcontractgegevens
 
-Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2020.
+Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2021.
 
 | | |
 |---|---|
 | Schema | [`xsd/UitwisselenKoppelcontractgegevens.xsd`](../xsd/UitwisselenKoppelcontractgegevens.xsd) |
-| Namespace | `http://www.sivi.org/Verzuimmanagement/UitwisselenKoppelcontractgegevens/2020` |
-| Versie | 1.1 |
+| Namespace | `http://www.sivi.org/Verzuimmanagement/UitwisselenKoppelcontractgegevens/2021` |
+| Versie | 2021.0 |
 | Elementen | 178 |
 
 Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchie; de volledige toelichting per element staat in de PDF bij de release.
@@ -67,7 +67,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;**`StrAdrNl`** | Straatadres nederland | 0..9 | groep |  |
 | &emsp;&emsp;&emsp;`Ingdat` | an10 | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;`Enddat` | an10 | 0..1 | datum |  |
-| &emsp;&emsp;&emsp;`Pc` | an6 | 1..1 | string |  |
+| &emsp;&emsp;&emsp;`Pc` | an6 | 1..1 | an6 |  |
 | &emsp;&emsp;&emsp;`Wnpl` | an..24 | 0..1 | an..24 |  |
 | &emsp;&emsp;&emsp;`StraatLang` | an..80 | 0..1 | an..80 |  |
 | &emsp;&emsp;&emsp;`Huisnr` | n..5 | 1..1 | n..5 |  |
@@ -75,7 +75,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;**`PbadrsNl`** | Postbusadres nederland | 0..9 | groep |  |
 | &emsp;&emsp;&emsp;`Ingdat` | an10 | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;`Enddat` | an10 | 0..1 | datum |  |
-| &emsp;&emsp;&emsp;`Pc` | an6 | 1..1 | string |  |
+| &emsp;&emsp;&emsp;`Pc` | an6 | 1..1 | an6 |  |
 | &emsp;&emsp;&emsp;`Wnpl` | an..24 | 0..1 | an..24 |  |
 | &emsp;&emsp;&emsp;`Pbnr` | n..5 | 1..1 | n..5 |  |
 | &emsp;&emsp;**`StrAdrBl`** | Straatadres buitenland | 0..* | groep |  |
@@ -132,7 +132,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;**`Intermediair`** | Intermediair | 0..1 | groep |  |
 | &emsp;&emsp;&emsp;&emsp;`HndlsnmOrg` | an..100 | 1..1 | an..100 |  |
 | &emsp;&emsp;&emsp;&emsp;**`StrAdrNl`** | Straatadres nederland | 0..* | groep |  |
-| &emsp;&emsp;&emsp;&emsp;&emsp;`Pc` | an6 | 1..1 | string |  |
+| &emsp;&emsp;&emsp;&emsp;&emsp;`Pc` | an6 | 1..1 | an6 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`Wnpl` | an..24 | 1..1 | an..24 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`StraatLang` | an..80 | 1..1 | an..80 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`Huisnr` | n..5 | 1..1 | n..5 |  |

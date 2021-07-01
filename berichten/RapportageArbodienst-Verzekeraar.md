@@ -1,12 +1,12 @@
 # Rapportage Arbodiensten - Verzekeraars
 
-Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2020.
+Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2021.
 
 | | |
 |---|---|
 | Schema | [`xsd/RapportageArbodienst-Verzekeraar.xsd`](../xsd/RapportageArbodienst-Verzekeraar.xsd) |
-| Namespace | `http://www.sivi.org/Verzuimmanagement/RapportageArbodienstVerzekeraar/2020` |
-| Versie | 1.1 |
+| Namespace | `http://www.sivi.org/Verzuimmanagement/RapportageArbodienstVerzekeraar/2021` |
+| Versie | 2021.0 |
 | Elementen | 71 |
 
 Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchie; de volledige toelichting per element staat in de PDF bij de release.

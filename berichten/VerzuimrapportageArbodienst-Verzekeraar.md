@@ -1,12 +1,12 @@
 # Verzuimrapportage Arbodiensten - Verzekeraars
 
-Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2020.
+Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2021.
 
 | | |
 |---|---|
 | Schema | [`xsd/VerzuimrapportageArbodienst-Verzekeraar.xsd`](../xsd/VerzuimrapportageArbodienst-Verzekeraar.xsd) |
-| Namespace | `http://www.sivi.org/Verzuimmanagement/VerzuimRapportageArbodienstVerzekeraar/2020` |
-| Versie | 1.1 |
+| Namespace | `http://www.sivi.org/Verzuimmanagement/VerzuimRapportageArbodienstVerzekeraar/2021` |
+| Versie | 2021.0 |
 | Elementen | 90 |
 
 Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchie; de volledige toelichting per element staat in de PDF bij de release.
@@ -40,7 +40,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;**`Wrknmr`** | Werknemer | 1..* | groep |  |
 | &emsp;&emsp;&emsp;`VrwrkCd` | an2 | 1..1 | an2 | 04 |
 | &emsp;&emsp;&emsp;`IngdatMut` | an10 | 0..1 | datum |  |
-| &emsp;&emsp;&emsp;`SofiNr` | n..9 | 1..1 | n..9 |  |
+| &emsp;&emsp;&emsp;`SofiNr` | n..9 | 0..1 | n..9 |  |
 | &emsp;&emsp;&emsp;`Gebdat` | an10 | 1..1 | datum |  |
 | &emsp;&emsp;&emsp;`Overldat` | an10 | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;`SignNm` | an..200 | 1..1 | an..200 |  |
@@ -51,7 +51,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;`TitANm` | an..35 | 0..1 | an..35 |  |
 | &emsp;&emsp;&emsp;`NmvrkrCd` | an2 | 1..1 | an2 | 01, 02, 03, 04 |
 | &emsp;&emsp;&emsp;`GslchtCd` | an1 | 1..1 | an1 | M, O, V |
-| &emsp;&emsp;&emsp;`IdWrknmr` | an..40 | 0..1 | an..40 |  |
+| &emsp;&emsp;&emsp;`IdWrknmr` | an..40 | 1..1 | an..40 |  |
 | &emsp;&emsp;&emsp;`IdWrknmrOud` | an..40 | 0..1 | an..40 |  |
 | &emsp;&emsp;&emsp;`IdWrknmrArbdnst` | an..40 | 0..1 | an..40 |  |
 | &emsp;&emsp;&emsp;`IdWrknmrVzkr` | an..40 | 0..1 | an..40 |  |
@@ -65,7 +65,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;&emsp;`NmVrpladrs` | an..70 | 0..1 | an..70 |  |
 | &emsp;&emsp;&emsp;&emsp;`Ingdat` | an10 | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;`Enddat` | an10 | 0..1 | datum |  |
-| &emsp;&emsp;&emsp;&emsp;`Pc` | an6 | 1..1 | string |  |
+| &emsp;&emsp;&emsp;&emsp;`Pc` | an6 | 1..1 | an6 |  |
 | &emsp;&emsp;&emsp;&emsp;`Wnpl` | an..24 | 1..1 | an..24 |  |
 | &emsp;&emsp;&emsp;&emsp;`StraatLang` | an..80 | 0..1 | an..80 |  |
 | &emsp;&emsp;&emsp;&emsp;`Huisnr` | n..5 | 1..1 | n..5 |  |
@@ -95,7 +95,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;&emsp;&emsp;`DatEndVrzmBeg` | an10 | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`RdnEndVrzmBegeleidingCd` | an2 | 0..1 | an2 | 01, 02, 03, 04, 05, 06, 99 |
 | &emsp;&emsp;&emsp;&emsp;&emsp;**`WrkHrvAdv`** | Werkhervattingsadvies | 0..99 | groep |  |
-| &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`VrwrkCd` | an2 | 1..1 | an2 | 01, 03, 05 |
+| &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`VrwrkCd` | an2 | 1..1 | an2 | 01, 03, 04, 05 |
 | &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`IdWrkHrvAdv` | an..40 | 1..1 | an..40 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`DatWerkhervattingsadvies` | an10 | 1..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;**`WrkHrvPer`** | Werkhervattingsperiode | 1..99 | groep |  |
