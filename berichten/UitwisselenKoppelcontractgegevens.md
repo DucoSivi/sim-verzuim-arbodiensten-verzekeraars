@@ -1,12 +1,12 @@
 # Uitwisselen Koppelcontractgegevens
 
-Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2021.
+Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2022.
 
 | | |
 |---|---|
 | Schema | [`xsd/UitwisselenKoppelcontractgegevens.xsd`](../xsd/UitwisselenKoppelcontractgegevens.xsd) |
-| Namespace | `http://www.sivi.org/Verzuimmanagement/UitwisselenKoppelcontractgegevens/2021` |
-| Versie | 2021.0 |
+| Namespace | `http://www.sivi.org/Verzuimmanagement/UitwisselenKoppelcontractgegevens/2022` |
+| Versie | 2022.0 |
 | Elementen | 178 |
 
 Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchie; de volledige toelichting per element staat in de PDF bij de release.
@@ -88,7 +88,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;`LandCd` | a2 | 1..1 | an2 |  |
 | &emsp;&emsp;&emsp;`Landnm` | an..40 | 0..1 | an..40 |  |
 | &emsp;&emsp;&emsp;`StraatLang` | an..80 | 0..1 | an..80 |  |
-| &emsp;&emsp;&emsp;`HuisnrBtl` | an..9 | 1..1 | an..9 |  |
+| &emsp;&emsp;&emsp;`HuisnrBtl` | Copyright SIVI | 1..1 | an..9 |  |
 | &emsp;&emsp;&emsp;`HuisnrToevBtl` | an..70 | 0..1 | an..70 |  |
 | &emsp;&emsp;**`PostbusadresBuitenland`** |  | 0..* | groep |  |
 | &emsp;&emsp;&emsp;`Ingdat` | an10 | 0..1 | datum |  |
@@ -128,7 +128,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;`Ingdat` | an10 | 1..1 | datum |  |
 | &emsp;&emsp;&emsp;`IngdatMut` | an10 | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;`Enddat` | an10 | 0..1 | datum |  |
-| &emsp;&emsp;&emsp;`StatusCntrctCd` | an2 | 1..1 | an2 | 01, 02 |
+| &emsp;&emsp;&emsp;`StatusCntrctCd` | Copyright SIVI | 1..1 | an2 | 01, 02 |
 | &emsp;&emsp;&emsp;**`Intermediair`** | Intermediair | 0..1 | groep |  |
 | &emsp;&emsp;&emsp;&emsp;`HndlsnmOrg` | an..100 | 1..1 | an..100 |  |
 | &emsp;&emsp;&emsp;&emsp;**`StrAdrNl`** | Straatadres nederland | 0..* | groep |  |
@@ -156,13 +156,13 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;`IngdatMut` | an10 | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;`Enddat` | an10 | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;`CntrctPerCd` | an..2 | 0..1 | an..2 | 01, 02, 03, 04, 05, 06 |
-| &emsp;&emsp;&emsp;`StatusCntrctCd` | an2 | 1..1 | an2 | 01, 02 |
+| &emsp;&emsp;&emsp;`StatusCntrctCd` | Copyright SIVI | 1..1 | an2 | 01, 02 |
 | &emsp;&emsp;&emsp;`RdnBeeindCntrct` | an2 | 0..1 | an2 | 01, 02, 03, 04, 05, 06, 99 |
 | &emsp;&emsp;&emsp;`SrtVerzekeringCd` | an2 | 1..1 | an2 | 01, 02, 03, 04, 05, 06, 07, 08, 09, 10 |
 | &emsp;&emsp;&emsp;`WachttijdInDgn` | n..3 | 0..1 | n..3 |  |
 | &emsp;&emsp;&emsp;`LoonsrtCd` | an..2 | 0..1 | an..2 | 01, 02, 03, 04 |
 | &emsp;&emsp;&emsp;`MaxJrLoonVrzkrd` | n..9,2 | 0..1 | n..9,2 |  |
-| &emsp;&emsp;&emsp;`DekkingspercentageJaar1` |  | 0..1 | n..6,2 |  |
+| &emsp;&emsp;&emsp;`PrcDkkngJr1` | n..6,2 | 0..1 | n..6,2 |  |
 | &emsp;&emsp;&emsp;`PrcDkkngJr2` | n..6,2 | 0..1 | n..6,2 |  |
 | &emsp;&emsp;&emsp;`PercWrkgvrslasten` | n..6,2 | 0..1 | n..6,2 |  |
 | &emsp;&emsp;&emsp;`Productkenmerk` | an..70 | 0..1 | an..70 |  |

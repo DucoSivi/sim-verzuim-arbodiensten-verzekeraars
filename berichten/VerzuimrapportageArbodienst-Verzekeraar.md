@@ -1,12 +1,12 @@
 # Verzuimrapportage Arbodiensten - Verzekeraars
 
-Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2021.
+Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2022.
 
 | | |
 |---|---|
 | Schema | [`xsd/VerzuimrapportageArbodienst-Verzekeraar.xsd`](../xsd/VerzuimrapportageArbodienst-Verzekeraar.xsd) |
-| Namespace | `http://www.sivi.org/Verzuimmanagement/VerzuimRapportageArbodienstVerzekeraar/2021` |
-| Versie | 2021.0 |
+| Namespace | `http://www.sivi.org/Verzuimmanagement/VerzuimRapportageArbodienstVerzekeraar/2022` |
+| Versie | 2022.0 |
 | Elementen | 90 |
 
 Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchie; de volledige toelichting per element staat in de PDF bij de release.

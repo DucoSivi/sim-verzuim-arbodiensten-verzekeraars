@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:str="http://www.sivi.org/Verzuimmanagement/VerzuimmeldingenVerzekeraarArbodienst/2021" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sivi.org/Verzuimmanagement/VerzuimmeldingenVerzekeraarArbodienst/2021" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2021.0">
+<xsd:schema xmlns:str="http://www.sivi.org/Verzuimmanagement/VerzuimmeldingenVerzekeraarArbodienst/2022" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sivi.org/Verzuimmanagement/VerzuimmeldingenVerzekeraarArbodienst/2022" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2022.0">
 	<xsd:element name="VerzuimmeldingenVerzekeraarArbodienst">
 		<xsd:complexType>
 			<xsd:sequence>
@@ -18,7 +18,7 @@
 								<xsd:simpleType>
 									<xsd:restriction base="xsd:string">
 										<xsd:maxLength value="5"/>
-										<xsd:enumeration value="00003"/>
+										<xsd:enumeration value="00004"/>
 									</xsd:restriction>
 								</xsd:simpleType>
 							</xsd:element>
@@ -324,6 +324,7 @@
 																<xsd:element name="DatEerstVrzmdgOud" type="xsd:date" minOccurs="0"/>
 																<xsd:element name="DatHrstld" type="xsd:date" minOccurs="0"/>
 																<xsd:element name="DatHrstldWrkgvr" type="xsd:date" minOccurs="0"/>
+																<xsd:element name="DatVrwHrstl" type="xsd:date" minOccurs="0"/>
 																<xsd:element name="PrcVrzm" type="str:Percentage"/>
 																<xsd:element name="BijzRdnStartVrzmCd" type="str:BijzondereRedenStartVerzuim" minOccurs="0"/>
 																<xsd:element name="OorzkVrzmCd">

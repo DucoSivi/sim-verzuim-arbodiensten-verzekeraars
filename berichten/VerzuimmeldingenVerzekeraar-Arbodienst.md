@@ -1,13 +1,13 @@
 # Verzuimmelding Verzekeraars - Arbodiensten
 
-Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2021.
+Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2022.
 
 | | |
 |---|---|
 | Schema | [`xsd/VerzuimmeldingenVerzekeraar-Arbodienst.xsd`](../xsd/VerzuimmeldingenVerzekeraar-Arbodienst.xsd) |
-| Namespace | `http://www.sivi.org/Verzuimmanagement/VerzuimmeldingenVerzekeraarArbodienst/2021` |
-| Versie | 2021.0 |
-| Elementen | 167 |
+| Namespace | `http://www.sivi.org/Verzuimmanagement/VerzuimmeldingenVerzekeraarArbodienst/2022` |
+| Versie | 2022.0 |
+| Elementen | 168 |
 
 Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchie; de volledige toelichting per element staat in de PDF bij de release.
 
@@ -18,7 +18,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | **`VerzuimmeldingenVerzekeraarArbodienst`** |  | 1..1 | groep |  |
 | &emsp;**`BrAlg`** | Bericht algemeen | 1..1 | groep |  |
 | &emsp;&emsp;`BrCd` | an..5 | 1..1 | an..5 | 00701 |
-| &emsp;&emsp;`VnrBrCd` | an..5 | 1..1 | an..5 | 00003 |
+| &emsp;&emsp;`VnrBrCd` | an..5 | 1..1 | an..5 | 00004 |
 | &emsp;&emsp;`AandatBr` | an10 | 1..1 | datum |  |
 | &emsp;&emsp;`AantijdBr` | an8 | 1..1 | tijd |  |
 | &emsp;&emsp;`IdInzndr` | an..40 | 1..1 | an..40 |  |
@@ -109,7 +109,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;&emsp;`DGAJN` | a1 | 0..1 | an1 | J, N, O |
 | &emsp;&emsp;&emsp;&emsp;`RdEndDnstvbndCd` | an2 | 0..1 | an2 | 01, 02, 03, 05, 06, 07, 08, 09, 10, 99 |
 | &emsp;&emsp;&emsp;&emsp;`PersNr` | an..35 | 0..1 | an..35 |  |
-| &emsp;&emsp;&emsp;&emsp;`PersNrOud` | Copyright SIVI | 0..1 | an..35 |  |
+| &emsp;&emsp;&emsp;&emsp;`PersNrOud` | an..35 | 0..1 | an..35 |  |
 | &emsp;&emsp;&emsp;&emsp;`CntrnrArbdnst` | an..40 | 0..1 | an..40 |  |
 | &emsp;&emsp;&emsp;&emsp;`SrtDnstvbndCd` | an2 | 0..1 | an2 | 04, 05, 07, 20, 21, 22, 23, 24 |
 | &emsp;&emsp;&emsp;&emsp;`Fnctcd` | an..15 | 0..1 | an..15 |  |
@@ -131,7 +131,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;&emsp;&emsp;`IdArbeidsrelatie` | an..40 | 1..1 | an..40 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`IdArbeidsrelatieOud` | an..40 | 0..1 | an..40 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`PersNr` | an..35 | 0..1 | an..35 |  |
-| &emsp;&emsp;&emsp;&emsp;&emsp;`PersNrOud` | Copyright SIVI | 0..1 | an..35 |  |
+| &emsp;&emsp;&emsp;&emsp;&emsp;`PersNrOud` | an..35 | 0..1 | an..35 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`Ingdat` | an10 | 1..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`IngdatMut` | an10 | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`Enddat` | an10 | 0..1 | datum |  |
@@ -149,8 +149,9 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;&emsp;&emsp;`DatEerstVrzmdgOud` | an10 | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`DatHrstld` | an10 | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`DatHrstldWrkgvr` | an10 | 0..1 | datum |  |
+| &emsp;&emsp;&emsp;&emsp;&emsp;`DatVrwHrstl` | an10 | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`PrcVrzm` | n..6,2 | 1..1 | n..6,2 |  |
-| &emsp;&emsp;&emsp;&emsp;&emsp;`BijzRdnStartVrzmCd` | Copyright SIVI | 0..1 | an2 | 01, 02, 03, 04 |
+| &emsp;&emsp;&emsp;&emsp;&emsp;`BijzRdnStartVrzmCd` | an2 | 0..1 | an2 | 01, 02, 03, 04 |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`OorzkVrzmCd` | an2 | 1..1 | an2 | 11, 99 |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`VngntJN` | a1 | 1..1 | an1 | J, N, O |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`RdnEndVrzmCd` | an2 | 0..1 | an2 | 01, 03, 04, 05, 07, 08, 09, 10, 11, 12, 99 |

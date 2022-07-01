@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:str="http://www.sivi.org/Verzuimmanagement/UitwisselenKoppelcontractgegevens/2021" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sivi.org/Verzuimmanagement/UitwisselenKoppelcontractgegevens/2021" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2021.0">
+<xsd:schema xmlns:str="http://www.sivi.org/Verzuimmanagement/UitwisselenKoppelcontractgegevens/2022" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sivi.org/Verzuimmanagement/UitwisselenKoppelcontractgegevens/2022" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2022.0">
 	<xsd:element name="UitwisselenKoppelcontractgegevens">
 		<xsd:complexType>
 			<xsd:sequence>
@@ -283,7 +283,7 @@
 										<xsd:element name="WachttijdInDgn" type="str:Aantal3" minOccurs="0"/>
 										<xsd:element name="LoonsrtCd" type="str:Loonsoort" minOccurs="0"/>
 										<xsd:element name="MaxJrLoonVrzkrd" type="str:Bedrag92" minOccurs="0"/>
-										<xsd:element name="DekkingspercentageJaar1" type="str:Percentage" minOccurs="0"/>
+										<xsd:element name="PrcDkkngJr1" type="str:Percentage" minOccurs="0"/>
 										<xsd:element name="PrcDkkngJr2" type="str:Percentage" minOccurs="0"/>
 										<xsd:element name="PercWrkgvrslasten" type="str:Percentage" minOccurs="0"/>
 										<xsd:element name="Productkenmerk" type="str:ProductkenmerkVerzuimverzekering" minOccurs="0"/>

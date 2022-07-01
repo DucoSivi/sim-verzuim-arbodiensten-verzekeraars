@@ -1,12 +1,12 @@
 # Aanvraag preventieve diensten verzekeraar
 
-Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2021.
+Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2022.
 
 | | |
 |---|---|
 | Schema | [`xsd/AanvraagPreventieveDienstenVerzekeraar.xsd`](../xsd/AanvraagPreventieveDienstenVerzekeraar.xsd) |
-| Namespace | `http://www.sivi.org/Verzuimmanagement/AanvraagPreventieveDienstenVerzekeraar/2021` |
-| Versie | 2021.0 |
+| Namespace | `http://www.sivi.org/Verzuimmanagement/AanvraagPreventieveDienstenVerzekeraar/2022` |
+| Versie | 2022.0 |
 | Elementen | 116 |
 
 Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchie; de volledige toelichting per element staat in de PDF bij de release.
@@ -95,7 +95,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;&emsp;`Fnctcd` | an..15 | 0..1 | an..15 |  |
 | &emsp;&emsp;&emsp;&emsp;`NmFnct` | an..35 | 0..1 | an..35 |  |
 | &emsp;&emsp;&emsp;&emsp;`NmOrgeenh` | an..70 | 0..1 | an..70 |  |
-| &emsp;&emsp;&emsp;&emsp;`OrgeenhCd` | Copyright SIVI | 1..1 | an..70 |  |
+| &emsp;&emsp;&emsp;&emsp;`OrgeenhCd` | an..70 | 1..1 | an..70 |  |
 | &emsp;&emsp;&emsp;&emsp;`OndOrgeenhCd` | an..70 | 0..1 | an..70 |  |
 | &emsp;&emsp;&emsp;&emsp;`OndOrgeenhCdNm` | an..70 | 0..1 | an..70 |  |
 | &emsp;&emsp;&emsp;&emsp;`PcStandplts` | an..9 | 0..1 | an..9 |  |
@@ -113,7 +113,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;&emsp;&emsp;`PevDienstToev` | an..70 | 0..1 | an..70 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`DatVanPrevD` | an10 | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`DatTotPrevD` | an10 | 0..1 | datum |  |
-| &emsp;&emsp;&emsp;&emsp;&emsp;`VerbPrevDCode` | Copyright SIVI | 0..1 | an..10 |  |
+| &emsp;&emsp;&emsp;&emsp;&emsp;`VerbPrevDCode` | an..10 | 0..1 | an..10 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`VerbPrevDOms` | an..70 | 0..1 | an..70 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;**`Cntprsn`** | Contactpersoon | 0..9 | groep |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`IdWrknmr` | an..40 | 0..1 | an..40 |  |
