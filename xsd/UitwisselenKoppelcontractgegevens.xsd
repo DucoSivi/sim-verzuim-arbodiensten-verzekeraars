@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:str="http://www.sivi.org/Verzuimmanagement/UitwisselenKoppelcontractgegevens/2022" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sivi.org/Verzuimmanagement/UitwisselenKoppelcontractgegevens/2022" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2022.0">
+<xsd:schema xmlns:str="http://www.sivi.org/Verzuimmanagement/UitwisselenKoppelcontractgegevens/2023" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sivi.org/Verzuimmanagement/UitwisselenKoppelcontractgegevens/2023" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2023.0">
 	<xsd:element name="UitwisselenKoppelcontractgegevens">
 		<xsd:complexType>
 			<xsd:sequence>
@@ -18,11 +18,21 @@
 								<xsd:simpleType>
 									<xsd:restriction base="xsd:string">
 										<xsd:maxLength value="5"/>
-										<xsd:enumeration value="00002"/>
+										<xsd:enumeration value="00003"/>
 									</xsd:restriction>
 								</xsd:simpleType>
 							</xsd:element>
-							<xsd:element name="FunctieBrCd" type="str:FunctieBericht"/>
+							<xsd:element name="FunctieBrCd">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:length value="2"/>
+										<xsd:enumeration value="01"/>
+										<xsd:enumeration value="02"/>
+										<xsd:enumeration value="03"/>
+										<xsd:enumeration value="04"/>
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
 							<xsd:element name="AandatBr" type="xsd:date"/>
 							<xsd:element name="AantijdBr" type="xsd:time"/>
 							<xsd:element name="IdInzndr" type="str:IdentificatieInzender"/>
@@ -88,10 +98,10 @@
 							<xsd:element name="VestigingsnrHandelsregister" type="str:VestigingsnummerHandelsregister" minOccurs="0"/>
 							<xsd:element name="IdWrkgvrArbdnst" type="str:IdentificatieWerkgever" minOccurs="0"/>
 							<xsd:element name="AansltnrGeguitwlngArbdnst" type="str:AansluitnummerGegevensuitwisseling" minOccurs="0"/>
+							<xsd:element name="RdnGnGgvnsuitw" type="str:RedenGeenGegevensuitwisseling" minOccurs="0"/>
 							<xsd:element name="IDWrkgvrVerzekeraar" type="str:IdentificatieWerkgever" minOccurs="0"/>
 							<xsd:element name="IdWrkgvrUWV" type="str:IdentificatieWerkgever" minOccurs="0"/>
 							<xsd:element name="Lhnr" type="str:Loonheffingnummer" minOccurs="0"/>
-							<xsd:element name="OrgeenhCd" type="str:OrganisatieEenheid"/>
 							<xsd:element name="IdVrzkrWGACd" type="str:IdentificatieVerzekeraarCode" minOccurs="0"/>
 							<xsd:element name="IdVrzkrERDZWCd" type="str:IdentificatieVerzekeraarCode" minOccurs="0"/>
 							<xsd:element name="IdVrzkrCollectieveZorgCd" type="str:IdentificatieVerzekeraarCode" minOccurs="0"/>
@@ -117,6 +127,17 @@
 							<xsd:element name="StrAdrNl" minOccurs="0" maxOccurs="9">
 								<xsd:complexType>
 									<xsd:sequence>
+										<xsd:element name="SrtAdrsCd" minOccurs="0">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:length value="2"/>
+													<xsd:enumeration value="01"/>
+													<xsd:enumeration value="02"/>
+													<xsd:enumeration value="03"/>
+													<xsd:enumeration value="05"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
 										<xsd:element name="Ingdat" type="xsd:date" minOccurs="0"/>
 										<xsd:element name="Enddat" type="xsd:date" minOccurs="0"/>
 										<xsd:element name="Pc" type="str:PostcodeNederland"/>
@@ -127,20 +148,20 @@
 									</xsd:sequence>
 								</xsd:complexType>
 							</xsd:element>
-							<xsd:element name="PbadrsNl" minOccurs="0" maxOccurs="9">
-								<xsd:complexType>
-									<xsd:sequence>
-										<xsd:element name="Ingdat" type="xsd:date" minOccurs="0"/>
-										<xsd:element name="Enddat" type="xsd:date" minOccurs="0"/>
-										<xsd:element name="Pc" type="str:PostcodeNederland"/>
-										<xsd:element name="Wnpl" type="str:Plaatsnaam" minOccurs="0"/>
-										<xsd:element name="Pbnr" type="str:Postbusnummer"/>
-									</xsd:sequence>
-								</xsd:complexType>
-							</xsd:element>
 							<xsd:element name="StrAdrBl" minOccurs="0" maxOccurs="unbounded">
 								<xsd:complexType>
 									<xsd:sequence>
+										<xsd:element name="SrtAdrsCd" minOccurs="0">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:length value="2"/>
+													<xsd:enumeration value="01"/>
+													<xsd:enumeration value="02"/>
+													<xsd:enumeration value="03"/>
+													<xsd:enumeration value="05"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
 										<xsd:element name="Ingdat" type="xsd:date" minOccurs="0"/>
 										<xsd:element name="Enddat" type="xsd:date" minOccurs="0"/>
 										<xsd:element name="LocomsBtl" type="str:Locatieomschrijving" minOccurs="0"/>
@@ -152,21 +173,6 @@
 										<xsd:element name="StraatLang" type="str:StraatnaamLang" minOccurs="0"/>
 										<xsd:element name="HuisnrBtl" type="str:HuisnummerBuitenland"/>
 										<xsd:element name="HuisnrToevBtl" type="str:HuisnummerToevoegingBuitenland" minOccurs="0"/>
-									</xsd:sequence>
-								</xsd:complexType>
-							</xsd:element>
-							<xsd:element name="PostbusadresBuitenland" minOccurs="0" maxOccurs="unbounded">
-								<xsd:complexType>
-									<xsd:sequence>
-										<xsd:element name="Ingdat" type="xsd:date" minOccurs="0"/>
-										<xsd:element name="Enddat" type="xsd:date" minOccurs="0"/>
-										<xsd:element name="LocomsBtl" type="str:Locatieomschrijving" minOccurs="0"/>
-										<xsd:element name="PcBtl" type="str:PostcodeBuitenland" minOccurs="0"/>
-										<xsd:element name="WnplBtl" type="str:Plaatsnaam"/>
-										<xsd:element name="RegBtl" type="str:RegionaamBuitenland" minOccurs="0"/>
-										<xsd:element name="LandCd" type="str:IsoLandcode"/>
-										<xsd:element name="Landnm" type="str:Landnaam" minOccurs="0"/>
-										<xsd:element name="PostbusnummerBuitenland" type="str:PostbusnummerBuitenland"/>
 									</xsd:sequence>
 								</xsd:complexType>
 							</xsd:element>
@@ -216,6 +222,7 @@
 										<xsd:element name="IngdatMut" type="xsd:date" minOccurs="0"/>
 										<xsd:element name="Enddat" type="xsd:date" minOccurs="0"/>
 										<xsd:element name="StatusCntrctCd" type="str:StatusContract"/>
+										<xsd:element name="TypArbContCod" type="str:TypeArbocontract"/>
 										<xsd:element name="Intermediair" minOccurs="0">
 											<xsd:complexType>
 												<xsd:sequence>
@@ -258,6 +265,7 @@
 													<xsd:element name="DnstvrlnngId" type="str:IdentificatieDienstverlening"/>
 													<xsd:element name="TypeArbopakketCd" type="str:TypeArbopakket" minOccurs="0"/>
 													<xsd:element name="TypeArbopakketOms" type="str:Omschrijving70" minOccurs="0"/>
+													<xsd:element name="RdnEindDnstvrl" type="str:RedenEindeDienstverlening" minOccurs="0"/>
 													<xsd:element name="Ingdat" type="xsd:date"/>
 													<xsd:element name="IngdatMut" type="xsd:date" minOccurs="0"/>
 													<xsd:element name="Enddat" type="xsd:date" minOccurs="0"/>
@@ -456,15 +464,6 @@
 			<xsd:enumeration value="05"/>
 		</xsd:restriction>
 	</xsd:simpleType>
-	<xsd:simpleType name="FunctieBericht">
-		<xsd:restriction base="xsd:string">
-			<xsd:length value="2"/>
-			<xsd:enumeration value="01"/>
-			<xsd:enumeration value="02"/>
-			<xsd:enumeration value="03"/>
-			<xsd:enumeration value="04"/>
-		</xsd:restriction>
-	</xsd:simpleType>
 	<xsd:simpleType name="Geslacht">
 		<xsd:restriction base="xsd:string">
 			<xsd:length value="1"/>
@@ -585,6 +584,7 @@
 	</xsd:simpleType>
 	<xsd:simpleType name="OrganisatieEenheid">
 		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="1"/>
 			<xsd:maxLength value="70"/>
 		</xsd:restriction>
 	</xsd:simpleType>
@@ -599,16 +599,6 @@
 	<xsd:simpleType name="Plaatsnaam">
 		<xsd:restriction base="xsd:string">
 			<xsd:maxLength value="24"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="Postbusnummer">
-		<xsd:restriction base="xsd:nonNegativeInteger">
-			<xsd:totalDigits value="5"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="PostbusnummerBuitenland">
-		<xsd:restriction base="xsd:string">
-			<xsd:maxLength value="7"/>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="PostcodeBuitenland">
@@ -635,7 +625,25 @@
 			<xsd:enumeration value="04"/>
 			<xsd:enumeration value="05"/>
 			<xsd:enumeration value="06"/>
+			<xsd:enumeration value="07"/>
+			<xsd:enumeration value="08"/>
 			<xsd:enumeration value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="RedenEindeDienstverlening">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="2"/>
+			<xsd:enumeration value="01"/>
+			<xsd:enumeration value="02"/>
+			<xsd:enumeration value="03"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="RedenGeenGegevensuitwisseling">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="2"/>
+			<xsd:enumeration value="01"/>
+			<xsd:enumeration value="02"/>
+			<xsd:enumeration value="03"/>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="RegionaamBuitenland">
@@ -694,6 +702,14 @@
 	<xsd:simpleType name="Tekst35">
 		<xsd:restriction base="xsd:string">
 			<xsd:maxLength value="35"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="TypeArbocontract">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="2"/>
+			<xsd:enumeration value="01"/>
+			<xsd:enumeration value="02"/>
+			<xsd:enumeration value="03"/>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="TypeArbopakket">

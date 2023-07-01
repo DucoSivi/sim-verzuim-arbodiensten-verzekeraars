@@ -1,13 +1,13 @@
 # Uitwisselen Koppelcontractgegevens
 
-Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2022.
+Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2023.
 
 | | |
 |---|---|
 | Schema | [`xsd/UitwisselenKoppelcontractgegevens.xsd`](../xsd/UitwisselenKoppelcontractgegevens.xsd) |
-| Namespace | `http://www.sivi.org/Verzuimmanagement/UitwisselenKoppelcontractgegevens/2022` |
-| Versie | 2022.0 |
-| Elementen | 178 |
+| Namespace | `http://www.sivi.org/Verzuimmanagement/UitwisselenKoppelcontractgegevens/2023` |
+| Versie | 2023.0 |
+| Elementen | 166 |
 
 Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchie; de volledige toelichting per element staat in de PDF bij de release.
 
@@ -18,7 +18,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | **`UitwisselenKoppelcontractgegevens`** |  | 1..1 | groep |  |
 | &emsp;**`BrAlg`** | Bericht algemeen | 1..1 | groep |  |
 | &emsp;&emsp;`BrCd` | an..5 | 1..1 | an..5 | 00700 |
-| &emsp;&emsp;`VnrBrCd` | an..5 | 1..1 | an..5 | 00002 |
+| &emsp;&emsp;`VnrBrCd` | an..5 | 1..1 | an..5 | 00003 |
 | &emsp;&emsp;`FunctieBrCd` | an2 | 1..1 | an2 | 01, 02, 03, 04 |
 | &emsp;&emsp;`AandatBr` | an10 | 1..1 | datum |  |
 | &emsp;&emsp;`AantijdBr` | an8 | 1..1 | tijd |  |
@@ -43,17 +43,17 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;`VestigingsnrHandelsregister` | n..12 | 0..1 | n..12 |  |
 | &emsp;&emsp;`IdWrkgvrArbdnst` | an..40 | 0..1 | an..40 |  |
 | &emsp;&emsp;`AansltnrGeguitwlngArbdnst` | an..70 | 0..1 | an..70 |  |
-| &emsp;&emsp;`IDWrkgvrVerzekeraar` | Copyright SIVI | 0..1 | an..40 |  |
+| &emsp;&emsp;`RdnGnGgvnsuitw` | an..2 | 0..1 | an..2 | 01, 02, 03 |
+| &emsp;&emsp;`IDWrkgvrVerzekeraar` | an..40 | 0..1 | an..40 |  |
 | &emsp;&emsp;`IdWrkgvrUWV` | an..40 | 0..1 | an..40 |  |
 | &emsp;&emsp;`Lhnr` | an..12 | 0..1 | an..12 |  |
-| &emsp;&emsp;`OrgeenhCd` | an..70 | 1..1 | an..70 |  |
 | &emsp;&emsp;`IdVrzkrWGACd` | an..4 | 0..1 | an..4 |  |
 | &emsp;&emsp;`IdVrzkrERDZWCd` | an..4 | 0..1 | an..4 |  |
 | &emsp;&emsp;`IdVrzkrCollectieveZorgCd` | an..4 | 0..1 | an..4 |  |
 | &emsp;&emsp;`SectorVolgensSBI` | n..5 | 0..1 | n..5 |  |
 | &emsp;&emsp;**`Personeelssterkte`** | Personeelssterkte | 0..999 | groep |  |
 | &emsp;&emsp;&emsp;`PeildatPersoneelssterkte` | an10 | 1..1 | datum |  |
-| &emsp;&emsp;&emsp;`VorigePeildatPersoneelssterkte` | an10 | 0..1 | datum |  |
+| &emsp;&emsp;&emsp;`VorigePeildatPersoneelssterkte` | Copyright SIVI | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;`AantWrknmrs` | n..7 | 1..1 | n..7 |  |
 | &emsp;&emsp;&emsp;`AantWrknmrsInDienstSindsVorigePeildat` | n..7 | 0..1 | n..7 |  |
 | &emsp;&emsp;&emsp;`AantWrknmrsUitDienstSindsVorigePeildat` | n..7 | 0..1 | n..7 |  |
@@ -65,6 +65,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;`AantMannelijkeFTE` | n..5 | 0..1 | n..5 |  |
 | &emsp;&emsp;&emsp;`AantUrenFTE` | n..3 | 0..1 | n..3 |  |
 | &emsp;&emsp;**`StrAdrNl`** | Straatadres nederland | 0..9 | groep |  |
+| &emsp;&emsp;&emsp;`SrtAdrsCd` | an2 | 0..1 | an2 | 01, 02, 03, 05 |
 | &emsp;&emsp;&emsp;`Ingdat` | an10 | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;`Enddat` | an10 | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;`Pc` | an6 | 1..1 | an6 |  |
@@ -72,13 +73,8 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;`StraatLang` | an..80 | 0..1 | an..80 |  |
 | &emsp;&emsp;&emsp;`Huisnr` | n..5 | 1..1 | n..5 |  |
 | &emsp;&emsp;&emsp;`HuisToev` | an..4 | 0..1 | an..4 |  |
-| &emsp;&emsp;**`PbadrsNl`** | Postbusadres nederland | 0..9 | groep |  |
-| &emsp;&emsp;&emsp;`Ingdat` | an10 | 0..1 | datum |  |
-| &emsp;&emsp;&emsp;`Enddat` | an10 | 0..1 | datum |  |
-| &emsp;&emsp;&emsp;`Pc` | an6 | 1..1 | an6 |  |
-| &emsp;&emsp;&emsp;`Wnpl` | an..24 | 0..1 | an..24 |  |
-| &emsp;&emsp;&emsp;`Pbnr` | n..5 | 1..1 | n..5 |  |
 | &emsp;&emsp;**`StrAdrBl`** | Straatadres buitenland | 0..* | groep |  |
+| &emsp;&emsp;&emsp;`SrtAdrsCd` | an2 | 0..1 | an2 | 01, 02, 03, 05 |
 | &emsp;&emsp;&emsp;`Ingdat` | an10 | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;`Enddat` | an10 | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;`LocomsBtl` | an..35 | 0..1 | an..35 |  |
@@ -88,18 +84,8 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;`LandCd` | a2 | 1..1 | an2 |  |
 | &emsp;&emsp;&emsp;`Landnm` | an..40 | 0..1 | an..40 |  |
 | &emsp;&emsp;&emsp;`StraatLang` | an..80 | 0..1 | an..80 |  |
-| &emsp;&emsp;&emsp;`HuisnrBtl` | Copyright SIVI | 1..1 | an..9 |  |
+| &emsp;&emsp;&emsp;`HuisnrBtl` | an..9 | 1..1 | an..9 |  |
 | &emsp;&emsp;&emsp;`HuisnrToevBtl` | an..70 | 0..1 | an..70 |  |
-| &emsp;&emsp;**`PostbusadresBuitenland`** |  | 0..* | groep |  |
-| &emsp;&emsp;&emsp;`Ingdat` | an10 | 0..1 | datum |  |
-| &emsp;&emsp;&emsp;`Enddat` | an10 | 0..1 | datum |  |
-| &emsp;&emsp;&emsp;`LocomsBtl` | an..35 | 0..1 | an..35 |  |
-| &emsp;&emsp;&emsp;`PcBtl` | an..9 | 0..1 | an..9 |  |
-| &emsp;&emsp;&emsp;`WnplBtl` | an..24 | 1..1 | an..24 |  |
-| &emsp;&emsp;&emsp;`RegBtl` | an..24 | 0..1 | an..24 |  |
-| &emsp;&emsp;&emsp;`LandCd` | a2 | 1..1 | an2 |  |
-| &emsp;&emsp;&emsp;`Landnm` | an..40 | 0..1 | an..40 |  |
-| &emsp;&emsp;&emsp;`PostbusnummerBuitenland` |  | 1..1 | an..7 |  |
 | &emsp;&emsp;**`AdministratieveEenheid`** | Administratieve eenheid | 0..1 | groep |  |
 | &emsp;&emsp;&emsp;`NmIp` | an..200 | 1..1 | an..200 |  |
 | &emsp;&emsp;&emsp;`LhNr` | an..12 | 0..1 | an..12 |  |
@@ -111,7 +97,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;`OndOrgeenhCd` | an..70 | 1..1 | an..70 |  |
 | &emsp;&emsp;&emsp;**`Personeelssterkte`** | Personeelssterkte | 0..* | groep |  |
 | &emsp;&emsp;&emsp;&emsp;`PeildatPersoneelssterkte` | an10 | 1..1 | datum |  |
-| &emsp;&emsp;&emsp;&emsp;`VorigePeildatPersoneelssterkte` | an10 | 0..1 | datum |  |
+| &emsp;&emsp;&emsp;&emsp;`VorigePeildatPersoneelssterkte` | Copyright SIVI | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;`AantWrknmrs` | n..7 | 1..1 | n..7 |  |
 | &emsp;&emsp;&emsp;&emsp;`AantWrknmrsInDienstSindsVorigePeildat` | n..7 | 0..1 | n..7 |  |
 | &emsp;&emsp;&emsp;&emsp;`AantWrknmrsUitDienstSindsVorigePeildat` | n..7 | 0..1 | n..7 |  |
@@ -128,7 +114,8 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;`Ingdat` | an10 | 1..1 | datum |  |
 | &emsp;&emsp;&emsp;`IngdatMut` | an10 | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;`Enddat` | an10 | 0..1 | datum |  |
-| &emsp;&emsp;&emsp;`StatusCntrctCd` | Copyright SIVI | 1..1 | an2 | 01, 02 |
+| &emsp;&emsp;&emsp;`StatusCntrctCd` | an2 | 1..1 | an2 | 01, 02 |
+| &emsp;&emsp;&emsp;`TypArbContCod` | an..2 | 1..1 | an..2 | 01, 02, 03 |
 | &emsp;&emsp;&emsp;**`Intermediair`** | Intermediair | 0..1 | groep |  |
 | &emsp;&emsp;&emsp;&emsp;`HndlsnmOrg` | an..100 | 1..1 | an..100 |  |
 | &emsp;&emsp;&emsp;&emsp;**`StrAdrNl`** | Straatadres nederland | 0..* | groep |  |
@@ -145,6 +132,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;&emsp;`DnstvrlnngId` | an..40 | 1..1 | an..40 |  |
 | &emsp;&emsp;&emsp;&emsp;`TypeArbopakketCd` | an..70 | 0..1 | an..70 |  |
 | &emsp;&emsp;&emsp;&emsp;`TypeArbopakketOms` | an..70 | 0..1 | an..70 |  |
+| &emsp;&emsp;&emsp;&emsp;`RdnEindDnstvrl` | an..2 | 0..1 | an..2 | 01, 02, 03 |
 | &emsp;&emsp;&emsp;&emsp;`Ingdat` | an10 | 1..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;`IngdatMut` | an10 | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;`Enddat` | an10 | 0..1 | datum |  |
@@ -156,8 +144,8 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;`IngdatMut` | an10 | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;`Enddat` | an10 | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;`CntrctPerCd` | an..2 | 0..1 | an..2 | 01, 02, 03, 04, 05, 06 |
-| &emsp;&emsp;&emsp;`StatusCntrctCd` | Copyright SIVI | 1..1 | an2 | 01, 02 |
-| &emsp;&emsp;&emsp;`RdnBeeindCntrct` | an2 | 0..1 | an2 | 01, 02, 03, 04, 05, 06, 99 |
+| &emsp;&emsp;&emsp;`StatusCntrctCd` | an2 | 1..1 | an2 | 01, 02 |
+| &emsp;&emsp;&emsp;`RdnBeeindCntrct` | an2 | 0..1 | an2 | 01, 02, 03, 04, 05, 06, 07, 08, 99 |
 | &emsp;&emsp;&emsp;`SrtVerzekeringCd` | an2 | 1..1 | an2 | 01, 02, 03, 04, 05, 06, 07, 08, 09, 10 |
 | &emsp;&emsp;&emsp;`WachttijdInDgn` | n..3 | 0..1 | n..3 |  |
 | &emsp;&emsp;&emsp;`LoonsrtCd` | an..2 | 0..1 | an..2 | 01, 02, 03, 04 |

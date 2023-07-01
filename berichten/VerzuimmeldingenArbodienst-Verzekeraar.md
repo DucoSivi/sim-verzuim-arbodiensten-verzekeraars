@@ -1,12 +1,12 @@
 # Verzuimmelding Arbodiensten - Verzekeraars
 
-Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2022.
+Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2023.
 
 | | |
 |---|---|
 | Schema | [`xsd/VerzuimmeldingenArbodienst-Verzekeraar.xsd`](../xsd/VerzuimmeldingenArbodienst-Verzekeraar.xsd) |
-| Namespace | `http://www.sivi.org/Verzuimmanagement/VerzuimmeldingenArbodienstVerzekeraar/2022` |
-| Versie | 2022.0 |
+| Namespace | `http://www.sivi.org/Verzuimmanagement/VerzuimmeldingenArbodienstVerzekeraar/2023` |
+| Versie | 2023.0 |
 | Elementen | 165 |
 
 Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchie; de volledige toelichting per element staat in de PDF bij de release.
@@ -18,7 +18,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | **`VerzuimmeldingenArbodienstVerzekeraar`** |  | 1..1 | groep |  |
 | &emsp;**`BrAlg`** | Bericht algemeen | 1..1 | groep |  |
 | &emsp;&emsp;`BrCd` | an..5 | 1..1 | an..5 | 00702 |
-| &emsp;&emsp;`VnrBrCd` | an..5 | 1..1 | an..5 | 00004 |
+| &emsp;&emsp;`VnrBrCd` | an..5 | 1..1 | an..5 | 00005 |
 | &emsp;&emsp;`AandatBr` | an10 | 1..1 | datum |  |
 | &emsp;&emsp;`AantijdBr` | an8 | 1..1 | tijd |  |
 | &emsp;&emsp;`IdInzndr` | an..40 | 1..1 | an..40 |  |
@@ -43,22 +43,22 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;`SrtComCd` | an2 | 1..1 | an2 | 06, 08, 10 |
 | &emsp;&emsp;&emsp;`NrCom` | an..512 | 1..1 | an..512 |  |
 | &emsp;&emsp;**`Cntprsn`** | Contactpersoon | 0..9 | groep |  |
-| &emsp;&emsp;&emsp;`IdWrknmr` | an..40 | 0..1 | an..40 |  |
 | &emsp;&emsp;&emsp;`Persnr` | an..35 | 0..1 | an..35 |  |
 | &emsp;&emsp;&emsp;`Achternaam` | an..200 | 1..1 | an..200 |  |
-| &emsp;&emsp;&emsp;`Voorl` | Copyright SIVI | 0..1 | an..6 |  |
+| &emsp;&emsp;&emsp;`Voorl` | a..6 | 0..1 | an..6 |  |
 | &emsp;&emsp;&emsp;`Roepnaam` | a..35 | 0..1 | an..35 |  |
 | &emsp;&emsp;&emsp;`GslchtCd` | an1 | 0..1 | an1 | M, O, V |
 | &emsp;&emsp;&emsp;`RolCntprsnCd` | an2 | 1..1 | an2 | 01, 02, 03, 04, 05 |
+| &emsp;&emsp;&emsp;`IdCntctprsn` | an..40 | 0..1 | an..40 |  |
 | &emsp;&emsp;&emsp;**`Com`** | Communicatie | 1..9 | groep |  |
 | &emsp;&emsp;&emsp;&emsp;`SrtComCd` | an2 | 1..1 | an2 | 06, 08, 10 |
 | &emsp;&emsp;&emsp;&emsp;`NrCom` | an..512 | 1..1 | an..512 |  |
 | &emsp;&emsp;**`Wrknmr`** | Werknemer | 1..* | groep |  |
-| &emsp;&emsp;&emsp;`IngdatMut` | Copyright SIVI | 0..1 | datum |  |
+| &emsp;&emsp;&emsp;`IngdatMut` | an10 | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;`Gebdat` | an10 | 1..1 | datum |  |
 | &emsp;&emsp;&emsp;`Overldat` | an10 | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;`SignNm` | an..200 | 1..1 | an..200 |  |
-| &emsp;&emsp;&emsp;`Voorl` | Copyright SIVI | 1..1 | an..6 |  |
+| &emsp;&emsp;&emsp;`Voorl` | a..6 | 1..1 | an..6 |  |
 | &emsp;&emsp;&emsp;`Voorv` | a..10 | 0..1 | an..10 |  |
 | &emsp;&emsp;&emsp;`Roepnaam` | a..35 | 0..1 | an..35 |  |
 | &emsp;&emsp;&emsp;`TitVNm` | an..35 | 0..1 | an..35 |  |
@@ -101,14 +101,14 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;&emsp;`SrtComCd` | an2 | 1..1 | an2 | 05, 06, 07, 08, 09, 10 |
 | &emsp;&emsp;&emsp;&emsp;`NrCom` | an..512 | 1..1 | an..512 |  |
 | &emsp;&emsp;&emsp;**`Dnstvbnd`** | Dienstverband | 1..99 | groep |  |
-| &emsp;&emsp;&emsp;&emsp;`IngdatMut` | Copyright SIVI | 0..1 | datum |  |
+| &emsp;&emsp;&emsp;&emsp;`IngdatMut` | an10 | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;`IdDnstvbnd` | an..40 | 1..1 | an..40 |  |
 | &emsp;&emsp;&emsp;&emsp;`IdDnstvbndOud` | an..40 | 0..1 | an..40 |  |
 | &emsp;&emsp;&emsp;&emsp;`Ingdat` | an10 | 1..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;`Enddat` | an10 | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;`DGAJN` | a1 | 0..1 | an1 | J, N, O |
 | &emsp;&emsp;&emsp;&emsp;`RdEndDnstvbndCd` | an2 | 0..1 | an2 | 01, 02, 03, 05, 06, 07, 08, 09, 10, 99 |
-| &emsp;&emsp;&emsp;&emsp;`PersNr` | Copyright SIVI | 0..1 | an..35 |  |
+| &emsp;&emsp;&emsp;&emsp;`PersNr` | an..35 | 0..1 | an..35 |  |
 | &emsp;&emsp;&emsp;&emsp;`PersNrOud` | an..35 | 0..1 | an..35 |  |
 | &emsp;&emsp;&emsp;&emsp;`CntrnrArbdnst` | an..40 | 0..1 | an..40 |  |
 | &emsp;&emsp;&emsp;&emsp;`SrtDnstvbndCd` | an2 | 0..1 | an2 | 04, 05, 07, 20, 21, 22, 23, 24 |
@@ -118,7 +118,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;&emsp;`OrgeenhCd` | an..70 | 0..1 | an..70 |  |
 | &emsp;&emsp;&emsp;&emsp;`OndOrgeenhCd` | an..70 | 0..1 | an..70 |  |
 | &emsp;&emsp;&emsp;&emsp;`OndOrgeenhCdNm` | an..70 | 0..1 | an..70 |  |
-| &emsp;&emsp;&emsp;&emsp;`PcStandplts` | an..9 | 0..1 | an..9 |  |
+| &emsp;&emsp;&emsp;&emsp;`PcStandplts` | Copyright SIVI | 0..1 | an..9 |  |
 | &emsp;&emsp;&emsp;&emsp;`OmsStandplts` | an..70 | 0..1 | an..70 |  |
 | &emsp;&emsp;&emsp;&emsp;`VrdlngCd` | an..35 | 0..1 | an..35 |  |
 | &emsp;&emsp;&emsp;&emsp;`CdBepTd` | an1 | 0..1 | an1 | B, O |
@@ -126,19 +126,19 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;&emsp;`AantUNormWk` | n..6,2 | 0..1 | n..6,2 |  |
 | &emsp;&emsp;&emsp;&emsp;`SrtVarWrktdCd` | an2 | 0..1 | an2 | 01, 02, 03, 04 |
 | &emsp;&emsp;&emsp;&emsp;`AantLnwchtdgn` | n..3 | 0..1 | n..3 |  |
-| &emsp;&emsp;&emsp;&emsp;`PrcLndrbtng` | n..6,2 | 0..1 | n..6,2 |  |
+| &emsp;&emsp;&emsp;&emsp;`PrcLndrbtng` | Copyright SIVI | 0..1 | n..6,2 |  |
 | &emsp;&emsp;&emsp;&emsp;**`Arbeidsrelatie`** | Arbeidsrelatie | 0..1 | groep |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`IdArbeidsrelatie` | an..40 | 1..1 | an..40 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`IdArbeidsrelatieOud` | an..40 | 0..1 | an..40 |  |
-| &emsp;&emsp;&emsp;&emsp;&emsp;`PersNr` | Copyright SIVI | 0..1 | an..35 |  |
+| &emsp;&emsp;&emsp;&emsp;&emsp;`PersNr` | an..35 | 0..1 | an..35 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`PersNrOud` | an..35 | 0..1 | an..35 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`Ingdat` | an10 | 1..1 | datum |  |
-| &emsp;&emsp;&emsp;&emsp;&emsp;`IngdatMut` | Copyright SIVI | 0..1 | datum |  |
+| &emsp;&emsp;&emsp;&emsp;&emsp;`IngdatMut` | an10 | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`Enddat` | an10 | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`AantCtrcturenPWk` | n..5,2 | 1..1 | n..5,2 |  |
 | &emsp;&emsp;&emsp;&emsp;**`Vrzm`** | Verzuim | 1..99 | groep |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`VrwrkCd` | an2 | 1..1 | an2 | 01, 02, 03, 04, 05 |
-| &emsp;&emsp;&emsp;&emsp;&emsp;`IngdatMutVrzm` | an10 | 1..1 | datum |  |
+| &emsp;&emsp;&emsp;&emsp;&emsp;`IngdatMutVrzm` | Copyright SIVI | 1..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`IngdatMutVrzmOud` | an10 | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`VrzmgvlId` | an..40 | 1..1 | an..40 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`VrzmgvlIdOud` | an..40 | 0..1 | an..40 |  |
@@ -159,24 +159,24 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;&emsp;&emsp;`WAZOCd` | an2 | 0..1 | an2 | 01, 02, 03 |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`PrcArbther` | n..6,2 | 0..1 | n..6,2 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;**`Cntprsn`** | Contactpersoon | 0..9 | groep |  |
-| &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`IdWrknmr` | an..40 | 0..1 | an..40 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`Persnr` | an..35 | 0..1 | an..35 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`Achternaam` | an..200 | 1..1 | an..200 |  |
-| &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`Voorl` | Copyright SIVI | 0..1 | an..6 |  |
+| &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`Voorl` | a..6 | 0..1 | an..6 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`Roepnaam` | a..35 | 0..1 | an..35 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`GslchtCd` | an1 | 0..1 | an1 | M, O, V |
 | &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`RolCntprsnCd` | an2 | 1..1 | an2 | 01, 02, 03, 04, 05 |
+| &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`IdCntctprsn` | an..40 | 0..1 | an..40 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;**`Com`** | Communicatie | 1..9 | groep |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`SrtComCd` | an2 | 1..1 | an2 | 06, 08, 10 |
 | &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`NrCom` | an..512 | 1..1 | an..512 |  |
 | &emsp;&emsp;&emsp;&emsp;**`Cntprsn`** | Contactpersoon | 0..9 | groep |  |
-| &emsp;&emsp;&emsp;&emsp;&emsp;`IdWrknmr` | an..40 | 0..1 | an..40 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`Persnr` | an..35 | 0..1 | an..35 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`Achternaam` | an..200 | 1..1 | an..200 |  |
-| &emsp;&emsp;&emsp;&emsp;&emsp;`Voorl` | Copyright SIVI | 0..1 | an..6 |  |
+| &emsp;&emsp;&emsp;&emsp;&emsp;`Voorl` | a..6 | 0..1 | an..6 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`Roepnaam` | a..35 | 0..1 | an..35 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`GslchtCd` | an1 | 0..1 | an1 | M, O, V |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`RolCntprsnCd` | an2 | 1..1 | an2 | 01, 02, 03, 04, 05 |
+| &emsp;&emsp;&emsp;&emsp;&emsp;`IdCntctprsn` | an..40 | 0..1 | an..40 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;**`Com`** | Communicatie | 1..9 | groep |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`SrtComCd` | an2 | 1..1 | an2 | 06, 08, 10 |
 | &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`NrCom` | an..512 | 1..1 | an..512 |  |
