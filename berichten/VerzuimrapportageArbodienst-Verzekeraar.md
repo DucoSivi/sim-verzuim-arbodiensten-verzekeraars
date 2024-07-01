@@ -1,12 +1,12 @@
 # Verzuimrapportage Arbodiensten - Verzekeraars
 
-Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2023.
+Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2024.
 
 | | |
 |---|---|
 | Schema | [`xsd/VerzuimrapportageArbodienst-Verzekeraar.xsd`](../xsd/VerzuimrapportageArbodienst-Verzekeraar.xsd) |
-| Namespace | `http://www.sivi.org/Verzuimmanagement/VerzuimRapportageArbodienstVerzekeraar/2023` |
-| Versie | 2023.0 |
+| Namespace | `http://www.sivi.org/Verzuimmanagement/VerzuimRapportageArbodienstVerzekeraar/2024` |
+| Versie | 2024.0 |
 | Elementen | 45 |
 
 Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchie; de volledige toelichting per element staat in de PDF bij de release.
@@ -17,46 +17,46 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 |---|---|---|---|---|
 | **`VerzuimRapportageArbodienstVerzekeraar`** |  | 1..1 | groep |  |
 | &emsp;**`BrAlg`** | Bericht algemeen | 1..1 | groep |  |
-| &emsp;&emsp;`BrCd` | an..5 | 1..1 | an..5 | 00704 |
-| &emsp;&emsp;`VnrBrCd` | an..5 | 1..1 | an..5 | 00003 |
-| &emsp;&emsp;`AandatBr` | an10 | 1..1 | datum |  |
-| &emsp;&emsp;`AantijdBr` | an8 | 1..1 | tijd |  |
-| &emsp;&emsp;`IdInzndr` | an..40 | 1..1 | an..40 |  |
-| &emsp;&emsp;`GebrSwPakket` | an..35 | 1..1 | an..35 |  |
-| &emsp;&emsp;`IdOntvngr` | an..40 | 1..1 | an..40 |  |
-| &emsp;&emsp;`Berrefnr` | an..512 | 1..1 | an..512 |  |
-| &emsp;&emsp;`TestJN` | a1 | 1..1 | an1 | J, N |
-| &emsp;&emsp;`OntvngstbevJN` | a1 | 1..1 | an1 | J, N |
-| &emsp;&emsp;`IngdatVerslagperiode` | an10 | 0..1 | datum |  |
-| &emsp;&emsp;`EnddatVerslagperiode` | an10 | 0..1 | datum |  |
+| &emsp;&emsp;`BrCd` | Bericht, code | 1..1 | an..5 | 00704 |
+| &emsp;&emsp;`VnrBrCd` | Versienummer bericht, code | 1..1 | an..5 | 00003 |
+| &emsp;&emsp;`AandatBr` | Aanmaakdatum bericht | 1..1 | datum |  |
+| &emsp;&emsp;`AantijdBr` | Aanmaaktijd bericht | 1..1 | tijd |  |
+| &emsp;&emsp;`IdInzndr` | Identificatie inzender | 1..1 | an..40 |  |
+| &emsp;&emsp;`GebrSwPakket` | Gebruikt softwarepakket | 1..1 | an..35 |  |
+| &emsp;&emsp;`IdOntvngr` | Identificatie ontvanger | 1..1 | an..40 |  |
+| &emsp;&emsp;`Berrefnr` | Berichtreferentienummer | 1..1 | an..512 |  |
+| &emsp;&emsp;`TestJN` | Test J/N | 1..1 | an1 | J, N |
+| &emsp;&emsp;`OntvngstbevJN` | Ontvangstbevestiging gewenst J/N | 1..1 | an1 | J, N |
+| &emsp;&emsp;`IngdatVerslagperiode` | Ingangsdatum Verslagperiode | 0..1 | datum |  |
+| &emsp;&emsp;`EnddatVerslagperiode` | Einddatum verslagperiode | 0..1 | datum |  |
 | &emsp;**`Wrkgvr`** | Werkgever | 1..* | groep |  |
-| &emsp;&emsp;`HndlsnmOrg` | an..100 | 1..1 | an..100 |  |
-| &emsp;&emsp;`InschrijvingsnrKvK` | n..8 | 0..1 | n..8 |  |
-| &emsp;&emsp;`VestigingsnrHandelsregister` | n..12 | 0..1 | n..12 |  |
-| &emsp;&emsp;`IdWrkgvrArbdnst` | an..40 | 1..1 | an..40 |  |
-| &emsp;&emsp;`AansltnrGeguitwlngArbdnst` | an..70 | 1..1 | an..70 |  |
-| &emsp;&emsp;`IDWrkgvrVerzekeraar` | an..40 | 0..1 | an..40 |  |
-| &emsp;&emsp;`Lhnr` | an..12 | 0..1 | an..12 |  |
+| &emsp;&emsp;`HndlsnmOrg` | Handelsnaam organisatie | 1..1 | an..100 |  |
+| &emsp;&emsp;`InschrijvingsnrKvK` | Inschrijvingsnummer Kamer van Koophandel | 0..1 | n..8 |  |
+| &emsp;&emsp;`VestigingsnrHandelsregister` | Vestigingsnummer | 0..1 | n..12 |  |
+| &emsp;&emsp;`IdWrkgvrArbdnst` | Identificatie werkgever bij arbodienst | 1..1 | an..40 |  |
+| &emsp;&emsp;`AansltnrGeguitwlngArbdnst` | Aansluitnummer gegevensuitwisseling Arbodienst | 1..1 | an..70 |  |
+| &emsp;&emsp;`IDWrkgvrVerzekeraar` | Identificatie werkgever bij verzekeraar | 0..1 | an..40 |  |
+| &emsp;&emsp;`Lhnr` | Loonheffingennummer | 0..1 | an..12 |  |
 | &emsp;&emsp;**`Wrknmr`** | Werknemer | 1..* | groep |  |
-| &emsp;&emsp;&emsp;`IdWrknmr` | an..40 | 1..1 | an..40 |  |
-| &emsp;&emsp;&emsp;`IdWrknmrArbdnst` | an..40 | 0..1 | an..40 |  |
-| &emsp;&emsp;&emsp;`IdWrknmrVzkr` | an..40 | 0..1 | an..40 |  |
+| &emsp;&emsp;&emsp;`IdWrknmr` | Identificatie werknemer | 1..1 | an..40 |  |
+| &emsp;&emsp;&emsp;`IdWrknmrArbdnst` | Identificatie werknemer arbodienst | 0..1 | an..40 |  |
+| &emsp;&emsp;&emsp;`IdWrknmrVzkr` | Identificatie werknemer verzekeraar | 0..1 | an..40 |  |
 | &emsp;&emsp;&emsp;**`Dnstvbnd`** | Dienstverband | 1..99 | groep |  |
-| &emsp;&emsp;&emsp;&emsp;`IdDnstvbnd` | an..40 | 1..1 | an..40 |  |
-| &emsp;&emsp;&emsp;&emsp;`PersNr` | an..35 | 0..1 | an..35 |  |
+| &emsp;&emsp;&emsp;&emsp;`IdDnstvbnd` | Identificatie dienstverband | 1..1 | an..40 |  |
+| &emsp;&emsp;&emsp;&emsp;`PersNr` | Personeelsnummer | 0..1 | an..35 |  |
 | &emsp;&emsp;&emsp;&emsp;**`Vrzm`** | Verzuim | 1..99 | groep |  |
-| &emsp;&emsp;&emsp;&emsp;&emsp;`VrzmgvlId` | an..40 | 1..1 | an..40 |  |
-| &emsp;&emsp;&emsp;&emsp;&emsp;`DatEerstVrzmdg` | an10 | 1..1 | datum |  |
-| &emsp;&emsp;&emsp;&emsp;&emsp;`DatEndVrzmBeg` | an10 | 0..1 | datum |  |
-| &emsp;&emsp;&emsp;&emsp;&emsp;`RdnEndVrzmBegeleidingCd` | an2 | 0..1 | an2 | 01, 02, 03, 04, 05, 06, 99 |
+| &emsp;&emsp;&emsp;&emsp;&emsp;`VrzmgvlId` | Verzuimgeval identificatie | 1..1 | an..40 |  |
+| &emsp;&emsp;&emsp;&emsp;&emsp;`DatEerstVrzmdg` | Datum eerste verzuimdag | 1..1 | datum |  |
+| &emsp;&emsp;&emsp;&emsp;&emsp;`DatEndVrzmBeg` | Datum einde verzuimbegeleiding | 0..1 | datum |  |
+| &emsp;&emsp;&emsp;&emsp;&emsp;`RdnEndVrzmBegeleidingCd` | Reden einde verzuimbegeleiding,code | 0..1 | an2 | 01, 02, 03, 04, 05, 06, 99 |
 | &emsp;&emsp;&emsp;&emsp;&emsp;**`WrkHrvAdv`** | Werkhervattingsadvies | 0..99 | groep |  |
-| &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`VrwrkCd` | an2 | 1..1 | an2 | 01, 03, 04, 05 |
-| &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`IdWrkHrvAdv` | an..40 | 1..1 | an..40 |  |
-| &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`DatWerkhervattingsadvies` | an10 | 1..1 | datum |  |
+| &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`VrwrkCd` | Verwerking, code | 1..1 | an2 | 01, 03, 04, 05 |
+| &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`IdWrkHrvAdv` | Identificatie werkhervattingsadvies bij Arbodienst | 1..1 | an..40 |  |
+| &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`DatWerkhervattingsadvies` | Datum werkhervattingsadvies | 1..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;**`WrkHrvPer`** | Werkhervattingsperiode | 1..99 | groep |  |
-| &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`Ingdat` | an10 | 1..1 | datum |  |
-| &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`Enddat` | an10 | 0..1 | datum |  |
-| &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`PercZiekConformWerkhervattingsadvies` | n..6,2 | 1..1 | n..6,2 |  |
+| &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`Ingdat` | Ingangsdatum | 1..1 | datum |  |
+| &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`Enddat` | Einddatum | 0..1 | datum |  |
+| &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`PercZiekConformWerkhervattingsadvies` | Percentage ziek conform werkhervattingsadvies | 1..1 | n..6,2 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;**`Actie`** | Actie | 0..99 | groep |  |
-| &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`DatPoortwActie` | an10 | 1..1 | datum |  |
-| &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`PoortwachteractieCd` | an2 | 1..1 | an2 | 01, 02, 03, 04, 05, 06, 07, 08, 09 |
+| &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`DatPoortwActie` | Datum Poortwachtactie | 1..1 | datum |  |
+| &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;`PoortwachteractieCd` | Poortwachteractie, code | 1..1 | an2 | 01, 02, 03, 04, 05, 06, 07, 08, 09 |
