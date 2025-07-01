@@ -1,4 +1,4 @@
-# Berichten Arbodiensten ↔ Verzekeraars 2024
+# Berichten Arbodiensten ↔ Verzekeraars 2025
 
 | Bericht | Schema | Elementen |
 |---|---|---|

@@ -1,12 +1,12 @@
 # Uitwisselen Koppelcontractgegevens
 
-Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2024.
+Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2025.
 
 | | |
 |---|---|
 | Schema | [`xsd/UitwisselenKoppelcontractgegevens.xsd`](../xsd/UitwisselenKoppelcontractgegevens.xsd) |
-| Namespace | `http://www.sivi.org/Verzuimmanagement/UitwisselenKoppelcontractgegevens/2024` |
-| Versie | 2024.0 |
+| Namespace | `http://www.ec-design.nl/SIVI/SDM/0.2/structures/UitwisselenKoppelcontractgegevens2025` |
+| Versie | . |
 | Elementen | 154 |
 
 Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchie; de volledige toelichting per element staat in de PDF bij de release.
@@ -15,10 +15,10 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 
 | XML-tag | Naam | Voorkomen | Formaat | Toegestane waarden |
 |---|---|---|---|---|
-| **`UitwisselenKoppelcontractgegevens`** |  | 1..1 | groep |  |
+| **`Message`** |  | 1..1 | groep |  |
 | &emsp;**`BrAlg`** | Bericht algemeen | 1..1 | groep |  |
 | &emsp;&emsp;`BrCd` | Bericht, code | 1..1 | an..5 | 00700 |
-| &emsp;&emsp;`VnrBrCd` | Versienummer bericht, code | 1..1 | an..5 | 00004 |
+| &emsp;&emsp;`VnrBrCd` | Versienummer bericht, code | 1..1 | an..5 | 00005 |
 | &emsp;&emsp;`FunctieBrCd` | Functie bericht, code | 1..1 | an2 | 01, 02, 03, 04 |
 | &emsp;&emsp;`AandatBr` | Aanmaakdatum bericht | 1..1 | datum |  |
 | &emsp;&emsp;`AantijdBr` | Aanmaaktijd bericht | 1..1 | tijd |  |
@@ -43,7 +43,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;`VestigingsnrHandelsregister` | Vestigingsnummer | 0..1 | n..12 |  |
 | &emsp;&emsp;`IdWrkgvrArbdnst` | Identificatie werkgever bij arbodienst | 0..1 | an..40 |  |
 | &emsp;&emsp;`AansltnrGeguitwlngArbdnst` | Aansluitnummer gegevensuitwisseling Arbodienst | 0..1 | an..70 |  |
-| &emsp;&emsp;`RdnGnGgvnsuitw` | Reden geen gegevensuitwisseling, code | 0..1 | an..2 | 01, 02, 03 |
+| &emsp;&emsp;`RdnGnGgvnsuitw` | Reden geen gegevensuitwisseling, code | 0..1 | an..2 | 01, 02, 03, 04 |
 | &emsp;&emsp;`IDWrkgvrVerzekeraar` | Identificatie werkgever bij verzekeraar | 0..1 | an..40 |  |
 | &emsp;&emsp;`IdWrkgvrUWV` | Identificatie werkgever bij UWV | 0..1 | an..40 |  |
 | &emsp;&emsp;`Lhnr` | Loonheffingennummer | 0..1 | an..12 |  |
@@ -53,7 +53,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;`SectorVolgensSBI` | Sector volgens SBI | 0..1 | n..5 |  |
 | &emsp;&emsp;**`Personeelssterkte`** | Personeelssterkte | 0..999 | groep |  |
 | &emsp;&emsp;&emsp;`PeildatPersoneelssterkte` | Peildatum personeelssterkte | 1..1 | datum |  |
-| &emsp;&emsp;&emsp;`VorigePeildatPersoneelssterkte` | Copyright SIVI | 0..1 | datum |  |
+| &emsp;&emsp;&emsp;`VorigePeildatPersoneelssterkte` | Vorige peildatum personeelssterkte | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;`AantWrknmrs` | Aantal werknemers | 1..1 | n..7 |  |
 | &emsp;&emsp;&emsp;`AantWrknmrsInDienstSindsVorigePeildat` | Aantal werknemers in dienst sinds vorige peildatum | 0..1 | n..7 |  |
 | &emsp;&emsp;&emsp;`AantWrknmrsUitDienstSindsVorigePeildat` | Aantal werknemers uit dienst sinds vorige peildatum | 0..1 | n..7 |  |
@@ -97,7 +97,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;`OndOrgeenhCd` | Onderdeel van organisatieeenheid, code | 1..1 | an..70 |  |
 | &emsp;&emsp;&emsp;**`Personeelssterkte`** | Personeelssterkte | 0..* | groep |  |
 | &emsp;&emsp;&emsp;&emsp;`PeildatPersoneelssterkte` | Peildatum personeelssterkte | 1..1 | datum |  |
-| &emsp;&emsp;&emsp;&emsp;`VorigePeildatPersoneelssterkte` | Copyright SIVI | 0..1 | datum |  |
+| &emsp;&emsp;&emsp;&emsp;`VorigePeildatPersoneelssterkte` | Vorige peildatum personeelssterkte | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;`AantWrknmrs` | Aantal werknemers | 1..1 | n..7 |  |
 | &emsp;&emsp;&emsp;&emsp;`AantWrknmrsInDienstSindsVorigePeildat` | Aantal werknemers in dienst sinds vorige peildatum | 0..1 | n..7 |  |
 | &emsp;&emsp;&emsp;&emsp;`AantWrknmrsUitDienstSindsVorigePeildat` | Aantal werknemers uit dienst sinds vorige peildatum | 0..1 | n..7 |  |
@@ -126,7 +126,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;&emsp;`DnstvrlnngId` | Identificatie dienstverlening | 1..1 | an..40 |  |
 | &emsp;&emsp;&emsp;&emsp;`TypeArbopakketCd` | Type arbopakket, code | 0..1 | an..70 |  |
 | &emsp;&emsp;&emsp;&emsp;`TypeArbopakketOms` | Type arbopakket, omschrijving | 0..1 | an..70 |  |
-| &emsp;&emsp;&emsp;&emsp;`RdnEindDnstvrl` | Reden einde dienstverlening, code | 0..1 | an..2 | 01, 02, 03 |
+| &emsp;&emsp;&emsp;&emsp;`RdnEindDnstvrl` | Reden einde dienstverlening, code | 0..1 | an..2 | 01, 02, 03, 04 |
 | &emsp;&emsp;&emsp;&emsp;`Ingdat` | Ingangsdatum | 1..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;`IngdatMut` | Ingangsdatum mutatie | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;`Enddat` | Einddatum | 0..1 | datum |  |
@@ -160,7 +160,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;`SrtComCd` | Soort communicatie, code | 1..1 | an2 | 01, 02, 04 |
 | &emsp;&emsp;&emsp;`NrCom` | Nummer/adres communicatie | 1..1 | an..512 |  |
 | &emsp;&emsp;**`Cntprsn`** | Contactpersoon | 0..* | groep |  |
-| &emsp;&emsp;&emsp;`Persnr` | Copyright SIVI | 0..1 | an..35 |  |
+| &emsp;&emsp;&emsp;`Persnr` | Personeelsnummer | 0..1 | an..35 |  |
 | &emsp;&emsp;&emsp;`Achternaam` | Achternaam/Achternamen | 1..1 | an..200 |  |
 | &emsp;&emsp;&emsp;`Voorl` | Voorletters | 1..1 | an..6 |  |
 | &emsp;&emsp;&emsp;`Roepnaam` | Roepnaam | 0..1 | an..35 |  |

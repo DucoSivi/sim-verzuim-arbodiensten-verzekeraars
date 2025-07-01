@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:str="http://www.sivi.org/Verzuimmanagement/VerzuimmeldingenArbodienstVerzekeraar/2024" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sivi.org/Verzuimmanagement/VerzuimmeldingenArbodienstVerzekeraar/2024" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2024.0">
+<xsd:schema xmlns:str="http://www.sivi.org/Verzuimmanagement/VerzuimmeldingenArbodienstVerzekeraar/2025" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.sivi.org/Verzuimmanagement/VerzuimmeldingenArbodienstVerzekeraar/2025" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2025.0">
 	<xsd:element name="VerzuimmeldingenArbodienstVerzekeraar">
 		<xsd:complexType>
 			<xsd:sequence>
@@ -18,7 +18,7 @@
 								<xsd:simpleType>
 									<xsd:restriction base="xsd:string">
 										<xsd:maxLength value="5"/>
-										<xsd:enumeration value="00005"/>
+										<xsd:enumeration value="00006"/>
 									</xsd:restriction>
 								</xsd:simpleType>
 							</xsd:element>
@@ -158,6 +158,16 @@
 										<xsd:element name="IdWrknmrOud" type="str:IdentificatieWerknemer" minOccurs="0"/>
 										<xsd:element name="IdWrknmrArbdnst" type="str:IdentificatieWerknemer" minOccurs="0"/>
 										<xsd:element name="IdWrknmrVzkr" type="str:IdentificatieWerknemer" minOccurs="0"/>
+										<xsd:element name="WrknmrNoriskJN" minOccurs="0">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:length value="1"/>
+													<xsd:pattern value="\D*"/>
+													<xsd:enumeration value="J"/>
+													<xsd:enumeration value="N"/>
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
 										<xsd:element name="Prtnr" minOccurs="0">
 											<xsd:complexType>
 												<xsd:sequence>
@@ -229,7 +239,6 @@
 													<xsd:element name="IdDnstvbndOud" type="str:IdentificatieDienstverband" minOccurs="0"/>
 													<xsd:element name="Ingdat" type="xsd:date"/>
 													<xsd:element name="Enddat" type="xsd:date" minOccurs="0"/>
-													<xsd:element name="DGAJN" type="str:LogischeEenheid" minOccurs="0"/>
 													<xsd:element name="RdEndDnstvbndCd" minOccurs="0">
 														<xsd:simpleType>
 															<xsd:restriction base="xsd:string">

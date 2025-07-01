@@ -1,12 +1,12 @@
 # Verzuimmelding Arbodiensten - Verzekeraars
 
-Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2024.
+Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2025.
 
 | | |
 |---|---|
 | Schema | [`xsd/VerzuimmeldingenArbodienst-Verzekeraar.xsd`](../xsd/VerzuimmeldingenArbodienst-Verzekeraar.xsd) |
-| Namespace | `http://www.sivi.org/Verzuimmanagement/VerzuimmeldingenArbodienstVerzekeraar/2024` |
-| Versie | 2024.0 |
+| Namespace | `http://www.sivi.org/Verzuimmanagement/VerzuimmeldingenArbodienstVerzekeraar/2025` |
+| Versie | 2025.0 |
 | Elementen | 165 |
 
 Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchie; de volledige toelichting per element staat in de PDF bij de release.
@@ -18,7 +18,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | **`VerzuimmeldingenArbodienstVerzekeraar`** |  | 1..1 | groep |  |
 | &emsp;**`BrAlg`** | Bericht algemeen | 1..1 | groep |  |
 | &emsp;&emsp;`BrCd` | Bericht, code | 1..1 | an..5 | 00702 |
-| &emsp;&emsp;`VnrBrCd` | Versienummer bericht, code | 1..1 | an..5 | 00005 |
+| &emsp;&emsp;`VnrBrCd` | Versienummer bericht, code | 1..1 | an..5 | 00006 |
 | &emsp;&emsp;`AandatBr` | Aanmaakdatum bericht | 1..1 | datum |  |
 | &emsp;&emsp;`AantijdBr` | Aanmaaktijd bericht | 1..1 | tijd |  |
 | &emsp;&emsp;`IdInzndr` | Identificatie inzender | 1..1 | an..40 |  |
@@ -69,6 +69,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;`IdWrknmrOud` | Identificatie werknemer oud | 0..1 | an..40 |  |
 | &emsp;&emsp;&emsp;`IdWrknmrArbdnst` | Identificatie werknemer arbodienst | 0..1 | an..40 |  |
 | &emsp;&emsp;&emsp;`IdWrknmrVzkr` | Identificatie werknemer verzekeraar | 0..1 | an..40 |  |
+| &emsp;&emsp;&emsp;`WrknmrNoriskJN` | Valt werknemer onder no-risk polis J/N | 0..1 | an1 | J, N |
 | &emsp;&emsp;&emsp;**`Prtnr`** | Partner | 0..1 | groep |  |
 | &emsp;&emsp;&emsp;&emsp;`SignNm` | Significant deel van de achternaam | 1..1 | an..200 |  |
 | &emsp;&emsp;&emsp;&emsp;`Voorv` | Voorvoegsels | 0..1 | an..10 |  |
@@ -106,7 +107,6 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;&emsp;`IdDnstvbndOud` | Identificatie dienstverband oud | 0..1 | an..40 |  |
 | &emsp;&emsp;&emsp;&emsp;`Ingdat` | Ingangsdatum | 1..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;`Enddat` | Einddatum | 0..1 | datum |  |
-| &emsp;&emsp;&emsp;&emsp;`DGAJN` | Dga jn | 0..1 | an1 | J, N, O |
 | &emsp;&emsp;&emsp;&emsp;`RdEndDnstvbndCd` | Reden einde dienstverband, code | 0..1 | an2 | 01, 02, 03, 05, 06, 07, 08, 09, 10, 99 |
 | &emsp;&emsp;&emsp;&emsp;`PersNr` | Personeelsnummer | 0..1 | an..35 |  |
 | &emsp;&emsp;&emsp;&emsp;`PersNrOud` | Personeelsnummer oud | 0..1 | an..35 |  |
@@ -118,15 +118,15 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;&emsp;`OrgeenhCd` | Organisatie-eenheid, code | 0..1 | an..70 |  |
 | &emsp;&emsp;&emsp;&emsp;`OndOrgeenhCd` | Onderdeel van organisatieeenheid, code | 0..1 | an..70 |  |
 | &emsp;&emsp;&emsp;&emsp;`OndOrgeenhCdNm` | Onderdeel van organisatie-eenheid, naam | 0..1 | an..70 |  |
-| &emsp;&emsp;&emsp;&emsp;`PcStandplts` | Copyright SIVI | 0..1 | an..9 |  |
-| &emsp;&emsp;&emsp;&emsp;`OmsStandplts` | Omschrijving standplaats | 0..1 | an..70 |  |
+| &emsp;&emsp;&emsp;&emsp;`PcStandplts` | Postcode standplaats | 0..1 | an..9 |  |
+| &emsp;&emsp;&emsp;&emsp;`OmsStandplts` | Copyright SIVI | 0..1 | an..70 |  |
 | &emsp;&emsp;&emsp;&emsp;`VrdlngCd` | Verdeling, code | 0..1 | an..35 |  |
 | &emsp;&emsp;&emsp;&emsp;`CdBepTd` | Code contract onbepaalde / bepaalde tijd | 0..1 | an1 | B, O |
 | &emsp;&emsp;&emsp;&emsp;`AantCtrcturenPWk` | Aantal contracturen per week | 0..1 | n..5,2 |  |
 | &emsp;&emsp;&emsp;&emsp;`AantUNormWk` | Normuren per week | 0..1 | n..6,2 |  |
 | &emsp;&emsp;&emsp;&emsp;`SrtVarWrktdCd` | Soort variabele werktijden, code | 0..1 | an2 | 01, 02, 03, 04 |
 | &emsp;&emsp;&emsp;&emsp;`AantLnwchtdgn` | Aantal loonwachtdagen | 0..1 | n..3 |  |
-| &emsp;&emsp;&emsp;&emsp;`PrcLndrbtng` | Copyright SIVI | 0..1 | n..6,2 |  |
+| &emsp;&emsp;&emsp;&emsp;`PrcLndrbtng` | Percentage loondoorbetaling | 0..1 | n..6,2 |  |
 | &emsp;&emsp;&emsp;&emsp;**`Arbeidsrelatie`** | Arbeidsrelatie | 0..1 | groep |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`IdArbeidsrelatie` | Identificatie arbeidsrelatie | 1..1 | an..40 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`IdArbeidsrelatieOud` | Identificatie arbeidsrelatie oud | 0..1 | an..40 |  |
@@ -138,7 +138,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;&emsp;&emsp;`AantCtrcturenPWk` | Aantal contracturen per week | 1..1 | n..5,2 |  |
 | &emsp;&emsp;&emsp;&emsp;**`Vrzm`** | Verzuim | 1..99 | groep |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`VrwrkCd` | Verwerking, code | 1..1 | an2 | 01, 02, 03, 04, 05 |
-| &emsp;&emsp;&emsp;&emsp;&emsp;`IngdatMutVrzm` | Copyright SIVI | 1..1 | datum |  |
+| &emsp;&emsp;&emsp;&emsp;&emsp;`IngdatMutVrzm` | Ingangsdatum mutatie verzuim | 1..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`IngdatMutVrzmOud` | Ingangsdatum mutatie verzuim oud | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`VrzmgvlId` | Verzuimgeval identificatie | 1..1 | an..40 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`VrzmgvlIdOud` | Verzuimgeval identificatie oud | 0..1 | an..40 |  |
