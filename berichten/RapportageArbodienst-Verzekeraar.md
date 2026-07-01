@@ -1,12 +1,12 @@
 # Rapportage Arbodiensten - Verzekeraars
 
-Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2025.
+Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2026.
 
 | | |
 |---|---|
 | Schema | [`xsd/RapportageArbodienst-Verzekeraar.xsd`](../xsd/RapportageArbodienst-Verzekeraar.xsd) |
-| Namespace | `http://www.ec-design.nl/SIVI/SDM/0.2/structures/RapportageArbodienst-Verzekeraar2025` |
-| Versie | . |
+| Namespace | `http://www.sivi.org/Verzuimmanagement/RapportageArbodienstVerzekeraar/2026` |
+| Versie | 2026.0 |
 | Elementen | 71 |
 
 Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchie; de volledige toelichting per element staat in de PDF bij de release.
@@ -15,7 +15,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 
 | XML-tag | Naam | Voorkomen | Formaat | Toegestane waarden |
 |---|---|---|---|---|
-| **`Message`** |  | 1..1 | groep |  |
+| **`RapportageArbodienstVerzekeraar`** |  | 1..1 | groep |  |
 | &emsp;**`BrAlg`** | Bericht algemeen | 1..1 | groep |  |
 | &emsp;&emsp;`BrCd` | Bericht, code | 1..1 | an..5 | 00703 |
 | &emsp;&emsp;`VnrBrCd` | Versienummer bericht, code | 1..1 | an..5 | 00002 |

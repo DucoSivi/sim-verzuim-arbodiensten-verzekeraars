@@ -1,12 +1,12 @@
 # Retourmelding
 
-Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2025.
+Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2026.
 
 | | |
 |---|---|
 | Schema | [`xsd/Retourmelding.xsd`](../xsd/Retourmelding.xsd) |
-| Namespace | `http://www.ec-design.nl/SIVI/SDM/0.2/structures/Retourmelding2025` |
-| Versie | . |
+| Namespace | `http://www.sivi.org/Verzuimmanagement/Retourmelding/2026` |
+| Versie | 2026.0 |
 | Elementen | 17 |
 
 Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchie; de volledige toelichting per element staat in de PDF bij de release.
@@ -15,7 +15,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 
 | XML-tag | Naam | Voorkomen | Formaat | Toegestane waarden |
 |---|---|---|---|---|
-| **`Message`** |  | 1..1 | groep |  |
+| **`Retourmelding`** |  | 1..1 | groep |  |
 | &emsp;**`BrAlg`** | Bericht algemeen | 1..1 | groep |  |
 | &emsp;&emsp;`BrCd` | Bericht, code | 1..1 | an..5 | 99999 |
 | &emsp;&emsp;`VnrBrCd` | Versienummer bericht, code | 1..1 | an..5 | 00003 |

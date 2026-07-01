@@ -1,13 +1,13 @@
 # Uitwisselen Koppelcontractgegevens
 
-Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2025.
+Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2026.
 
 | | |
 |---|---|
 | Schema | [`xsd/UitwisselenKoppelcontractgegevens.xsd`](../xsd/UitwisselenKoppelcontractgegevens.xsd) |
-| Namespace | `http://www.ec-design.nl/SIVI/SDM/0.2/structures/UitwisselenKoppelcontractgegevens2025` |
-| Versie | . |
-| Elementen | 154 |
+| Namespace | `http://www.sivi.org/Verzuimmanagement/UitwisselenKoppelcontractgegevens/2026` |
+| Versie | 2026.0 |
+| Elementen | 157 |
 
 Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchie; de volledige toelichting per element staat in de PDF bij de release.
 
@@ -15,10 +15,10 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 
 | XML-tag | Naam | Voorkomen | Formaat | Toegestane waarden |
 |---|---|---|---|---|
-| **`Message`** |  | 1..1 | groep |  |
+| **`UitwisselenKoppelcontractgegevens`** |  | 1..1 | groep |  |
 | &emsp;**`BrAlg`** | Bericht algemeen | 1..1 | groep |  |
 | &emsp;&emsp;`BrCd` | Bericht, code | 1..1 | an..5 | 00700 |
-| &emsp;&emsp;`VnrBrCd` | Versienummer bericht, code | 1..1 | an..5 | 00005 |
+| &emsp;&emsp;`VnrBrCd` | Versienummer bericht, code | 1..1 | an..5 | 00006 |
 | &emsp;&emsp;`FunctieBrCd` | Functie bericht, code | 1..1 | an2 | 01, 02, 03, 04 |
 | &emsp;&emsp;`AandatBr` | Aanmaakdatum bericht | 1..1 | datum |  |
 | &emsp;&emsp;`AantijdBr` | Aanmaaktijd bericht | 1..1 | tijd |  |
@@ -89,6 +89,9 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;**`AdministratieveEenheid`** | Administratieve eenheid | 0..1 | groep |  |
 | &emsp;&emsp;&emsp;`NmIp` | Naam inhoudingsplichtige | 1..1 | an..200 |  |
 | &emsp;&emsp;&emsp;`LhNr` | Loonheffingennummer | 0..1 | an..12 |  |
+| &emsp;&emsp;&emsp;**`SectorRisicogroep`** | Sector risicogroep | 0..1 | groep |  |
+| &emsp;&emsp;&emsp;&emsp;`CdSectorOsv` | Code sector OSV | 1..1 | an3 | 68 waarden, o.a. 001, 002, 003, 004, 005 … |
+| &emsp;&emsp;&emsp;&emsp;`CdRisicopremiegroep` | Code risicopremiegroep | 0..1 | an2 | 00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11 |
 | &emsp;&emsp;**`OrgEenh`** | Organisatie eenheid | 0..999 | groep |  |
 | &emsp;&emsp;&emsp;`VrwrkCd` | Verwerking, code | 1..1 | an2 | 01, 02, 03, 04, 05 |
 | &emsp;&emsp;&emsp;`IngdatMut` | Ingangsdatum mutatie | 0..1 | datum |  |

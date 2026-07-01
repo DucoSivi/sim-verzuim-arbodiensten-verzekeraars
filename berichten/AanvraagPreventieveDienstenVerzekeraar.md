@@ -1,12 +1,12 @@
 # Aanvraag preventieve diensten verzekeraar
 
-Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2025.
+Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2026.
 
 | | |
 |---|---|
 | Schema | [`xsd/AanvraagPreventieveDienstenVerzekeraar.xsd`](../xsd/AanvraagPreventieveDienstenVerzekeraar.xsd) |
-| Namespace | `http://www.ec-design.nl/SIVI/SDM/0.2/structures/AanvraagPreventieveDienstenVerzekeraar2025` |
-| Versie | . |
+| Namespace | `http://www.sivi.org/Verzuimmanagement/AanvraagPreventieveDienstenVerzekeraar/2026` |
+| Versie | 2026.0 |
 | Elementen | 117 |
 
 Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchie; de volledige toelichting per element staat in de PDF bij de release.
@@ -15,10 +15,10 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 
 | XML-tag | Naam | Voorkomen | Formaat | Toegestane waarden |
 |---|---|---|---|---|
-| **`Message`** |  | 1..1 | groep |  |
+| **`AanvraagPreventieveDienstenVerzekeraar`** |  | 1..1 | groep |  |
 | &emsp;**`BrAlg`** | Bericht algemeen | 1..1 | groep |  |
 | &emsp;&emsp;`BrCd` | Bericht, code | 1..1 | an..5 | 00602 |
-| &emsp;&emsp;`VnrBrCd` | Versienummer bericht, code | 1..1 | an..5 | 00004 |
+| &emsp;&emsp;`VnrBrCd` | Versienummer bericht, code | 1..1 | an..5 | 00005 |
 | &emsp;&emsp;`AandatBr` | Aanmaakdatum bericht | 1..1 | datum |  |
 | &emsp;&emsp;`AantijdBr` | Aanmaaktijd bericht | 1..1 | tijd |  |
 | &emsp;&emsp;`IdInzndr` | Identificatie inzender | 1..1 | an..40 |  |
@@ -51,7 +51,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;&emsp;`NrCom` | Nummer/adres communicatie | 1..1 | an..512 |  |
 | &emsp;&emsp;**`Wrknmr`** | Werknemer | 1..* | groep |  |
 | &emsp;&emsp;&emsp;`Gebdat` | Geboortedatum | 1..1 | datum |  |
-| &emsp;&emsp;&emsp;`SignNm` | Copyright SIVI | 1..1 | an..200 |  |
+| &emsp;&emsp;&emsp;`SignNm` | Significant deel van de achternaam | 1..1 | an..200 |  |
 | &emsp;&emsp;&emsp;`Voorl` | Voorletters | 1..1 | an..6 |  |
 | &emsp;&emsp;&emsp;`Voorv` | Voorvoegsels | 0..1 | an..10 |  |
 | &emsp;&emsp;&emsp;`Roepnaam` | Roepnaam | 0..1 | an..35 |  |
@@ -61,7 +61,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;`GslchtCd` | Geslachtsaanduiding, code | 1..1 | an1 | M, O, V |
 | &emsp;&emsp;&emsp;`IdWrknmr` | Identificatie werknemer | 0..1 | an..40 |  |
 | &emsp;&emsp;&emsp;**`Prtnr`** | Partner | 0..1 | groep |  |
-| &emsp;&emsp;&emsp;&emsp;`SignNm` | Copyright SIVI | 1..1 | an..200 |  |
+| &emsp;&emsp;&emsp;&emsp;`SignNm` | Significant deel van de achternaam | 1..1 | an..200 |  |
 | &emsp;&emsp;&emsp;&emsp;`Voorv` | Voorvoegsels | 0..1 | an..10 |  |
 | &emsp;&emsp;&emsp;**`StrAdrNl`** | Straatadres nederland | 0..9 | groep |  |
 | &emsp;&emsp;&emsp;&emsp;`SrtAdrsCd` | Soort adres, code | 1..1 | an2 | 01, 02, 04 |
@@ -87,7 +87,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;**`Com`** | Communicatie | 0..9 | groep |  |
 | &emsp;&emsp;&emsp;&emsp;`SrtComCd` | Copyright SIVI | 1..1 | an2 | 05, 06, 07, 08, 09, 10 |
 | &emsp;&emsp;&emsp;&emsp;`NrCom` | Nummer/adres communicatie | 1..1 | an..512 |  |
-| &emsp;&emsp;&emsp;**`Dnstvbnd`** | Dienstverband | 1..99 | groep |  |
+| &emsp;&emsp;&emsp;**`Dnstvbnd`** | Dienstverband | 1..999 | groep |  |
 | &emsp;&emsp;&emsp;&emsp;`IdDnstvbnd` | Identificatie dienstverband | 0..1 | an..40 |  |
 | &emsp;&emsp;&emsp;&emsp;`PersNr` | Personeelsnummer | 0..1 | an..35 |  |
 | &emsp;&emsp;&emsp;&emsp;`CntrnrArbdnst` | Contractnummer bij Arbo-dienst | 0..1 | an..40 |  |
@@ -109,8 +109,8 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;&emsp;**`PrevDienst`** | Preventieve dienst | 0..9 | groep |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`VrwrkCd` | Verwerking, code | 1..1 | an2 | 01, 02, 03, 04, 05 |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`IngdatMutPrev` | Ingangsdatum mutatie prev. dienst | 1..1 | datum |  |
-| &emsp;&emsp;&emsp;&emsp;&emsp;`IdPrevDienst` | Identificatie preventieve dienst | 1..1 | an..40 |  |
-| &emsp;&emsp;&emsp;&emsp;&emsp;`PreventDienst` | Copyright SIVI | 1..1 | an2 | 19 waarden, o.a. 01, 02, 03, 04, 05 … |
+| &emsp;&emsp;&emsp;&emsp;&emsp;`IdPrevDienst` | Copyright SIVI | 1..1 | an..40 |  |
+| &emsp;&emsp;&emsp;&emsp;&emsp;`PreventDienst` | Preventieve dienst, code | 1..1 | an2 | 19 waarden, o.a. 01, 02, 03, 04, 05 … |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`PevDienstToev` | Preventieve dienst toevoeging | 0..1 | an..70 |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`DatVanPrevD` | Datum vanaf preventieve dienst | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;&emsp;`DatTotPrevD` | Datum uitvoering preventieve dienst | 0..1 | datum |  |

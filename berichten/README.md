@@ -1,4 +1,4 @@
-# Berichten Arbodiensten ↔ Verzekeraars 2025
+# Berichten Arbodiensten ↔ Verzekeraars 2026
 
 | Bericht | Schema | Elementen |
 |---|---|---|
@@ -6,7 +6,7 @@
 | [Interventieproces](Interventieproces.md) | [`Interventieproces.xsd`](../xsd/Interventieproces.xsd) | 42 |
 | [Rapportage Arbodiensten - Verzekeraars](RapportageArbodienst-Verzekeraar.md) | [`RapportageArbodienst-Verzekeraar.xsd`](../xsd/RapportageArbodienst-Verzekeraar.xsd) | 71 |
 | [Retourmelding](Retourmelding.md) | [`Retourmelding.xsd`](../xsd/Retourmelding.xsd) | 17 |
-| [Uitwisselen Koppelcontractgegevens](UitwisselenKoppelcontractgegevens.md) | [`UitwisselenKoppelcontractgegevens.xsd`](../xsd/UitwisselenKoppelcontractgegevens.xsd) | 154 |
+| [Uitwisselen Koppelcontractgegevens](UitwisselenKoppelcontractgegevens.md) | [`UitwisselenKoppelcontractgegevens.xsd`](../xsd/UitwisselenKoppelcontractgegevens.xsd) | 157 |
 | [Verwerkingsmelding arbodienst - verzekeraar](VerwerkingsmeldingArbo-verz.md) | [`VerwerkingsmeldingArbo-verz.xsd`](../xsd/VerwerkingsmeldingArbo-verz.xsd) | 24 |
 | [Verzuimmelding Arbodiensten - Verzekeraars](VerzuimmeldingenArbodienst-Verzekeraar.md) | [`VerzuimmeldingenArbodienst-Verzekeraar.xsd`](../xsd/VerzuimmeldingenArbodienst-Verzekeraar.xsd) | 165 |
 | [Verzuimmelding Verzekeraars - Arbodiensten](VerzuimmeldingenVerzekeraar-Arbodienst.md) | [`VerzuimmeldingenVerzekeraar-Arbodienst.xsd`](../xsd/VerzuimmeldingenVerzekeraar-Arbodienst.xsd) | 171 |

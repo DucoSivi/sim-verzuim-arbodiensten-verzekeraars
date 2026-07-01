@@ -1,12 +1,12 @@
 # Verzuimmelding Verzekeraars - Arbodiensten
 
-Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2025.
+Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2026.
 
 | | |
 |---|---|
 | Schema | [`xsd/VerzuimmeldingenVerzekeraar-Arbodienst.xsd`](../xsd/VerzuimmeldingenVerzekeraar-Arbodienst.xsd) |
-| Namespace | `http://www.sivi.org/Verzuimmanagement/VerzuimmeldingenVerzekeraarArbodienst/2025` |
-| Versie | 2025.0 |
+| Namespace | `http://www.sivi.org/Verzuimmanagement/VerzuimmeldingenVerzekeraarArbodienst/2026` |
+| Versie | 2026.0 |
 | Elementen | 171 |
 
 Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchie; de volledige toelichting per element staat in de PDF bij de release.
@@ -18,7 +18,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | **`VerzuimmeldingenVerzekeraarArbodienst`** |  | 1..1 | groep |  |
 | &emsp;**`BrAlg`** | Bericht algemeen | 1..1 | groep |  |
 | &emsp;&emsp;`BrCd` | Bericht, code | 1..1 | an..5 | 00701 |
-| &emsp;&emsp;`VnrBrCd` | Versienummer bericht, code | 1..1 | an..5 | 00007 |
+| &emsp;&emsp;`VnrBrCd` | Versienummer bericht, code | 1..1 | an..5 | 00008 |
 | &emsp;&emsp;`AandatBr` | Aanmaakdatum bericht | 1..1 | datum |  |
 | &emsp;&emsp;`AantijdBr` | Aanmaaktijd bericht | 1..1 | tijd |  |
 | &emsp;&emsp;`IdInzndr` | Identificatie inzender | 1..1 | an..40 |  |
@@ -101,7 +101,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;**`Com`** | Communicatie | 0..9 | groep |  |
 | &emsp;&emsp;&emsp;&emsp;`SrtComCd` | Soort communicatie, code | 1..1 | an2 | 05, 06, 07, 08, 09, 10 |
 | &emsp;&emsp;&emsp;&emsp;`NrCom` | Nummer/adres communicatie | 1..1 | an..512 |  |
-| &emsp;&emsp;&emsp;**`Dnstvbnd`** | Dienstverband | 1..99 | groep |  |
+| &emsp;&emsp;&emsp;**`Dnstvbnd`** | Dienstverband | 1..999 | groep |  |
 | &emsp;&emsp;&emsp;&emsp;`IngdatMut` | Ingangsdatum mutatie | 0..1 | datum |  |
 | &emsp;&emsp;&emsp;&emsp;`IdDnstvbnd` | Identificatie dienstverband | 1..1 | an..40 |  |
 | &emsp;&emsp;&emsp;&emsp;`IdDnstvbndOud` | Identificatie dienstverband oud | 0..1 | an..40 |  |

@@ -1,12 +1,12 @@
 # Interventieproces
 
-Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2025.
+Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2026.
 
 | | |
 |---|---|
 | Schema | [`xsd/Interventieproces.xsd`](../xsd/Interventieproces.xsd) |
-| Namespace | `http://www.ec-design.nl/SIVI/SDM/0.2/structures/Interventieproces2025` |
-| Versie | . |
+| Namespace | `http://www.sivi.org/Verzuimmanagement/Interventieproces/2026` |
+| Versie | 2026.0 |
 | Elementen | 42 |
 
 Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchie; de volledige toelichting per element staat in de PDF bij de release.
@@ -15,10 +15,10 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 
 | XML-tag | Naam | Voorkomen | Formaat | Toegestane waarden |
 |---|---|---|---|---|
-| **`Message`** |  | 1..1 | groep |  |
+| **`Interventieproces`** |  | 1..1 | groep |  |
 | &emsp;**`BrAlg`** | Bericht algemeen | 1..1 | groep |  |
 | &emsp;&emsp;`BrCd` | Bericht, code | 1..1 | an..5 | 00801 |
-| &emsp;&emsp;`VnrBrCd` | Versienummer bericht, code | 1..1 | an..5 | 00001 |
+| &emsp;&emsp;`VnrBrCd` | Versienummer bericht, code | 1..1 | an..5 | 00002 |
 | &emsp;&emsp;`FunctieBrCd` | Functie bericht, code | 1..1 | an2 | 05, 06 |
 | &emsp;&emsp;`AandatBr` | Aanmaakdatum bericht | 1..1 | datum |  |
 | &emsp;&emsp;`AantijdBr` | Aanmaaktijd bericht | 1..1 | tijd |  |
@@ -43,7 +43,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 | &emsp;&emsp;&emsp;`IdWrknmr` | Identificatie werknemer | 1..1 | an..40 |  |
 | &emsp;&emsp;&emsp;`IdWrknmrArbdnst` | Identificatie werknemer arbodienst | 0..1 | an..40 |  |
 | &emsp;&emsp;&emsp;`IdWrknmrVzkr` | Identificatie werknemer verzekeraar | 0..1 | an..40 |  |
-| &emsp;&emsp;&emsp;**`Dnstvbnd`** | Dienstverband | 1..99 | groep |  |
+| &emsp;&emsp;&emsp;**`Dnstvbnd`** | Dienstverband | 1..999 | groep |  |
 | &emsp;&emsp;&emsp;&emsp;`IdDnstvbnd` | Identificatie dienstverband | 1..1 | an..40 |  |
 | &emsp;&emsp;&emsp;&emsp;`PersNr` | Personeelsnummer | 0..1 | an..35 |  |
 | &emsp;&emsp;&emsp;&emsp;`LnLbPh` | Loon LB/PH | 0..1 | n..9,2 |  |

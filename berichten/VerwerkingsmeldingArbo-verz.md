@@ -1,12 +1,12 @@
 # Verwerkingsmelding arbodienst - verzekeraar
 
-Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2025.
+Verzuimstandaard Arbodiensten ↔ Verzekeraars, release 2026.
 
 | | |
 |---|---|
 | Schema | [`xsd/VerwerkingsmeldingArbo-verz.xsd`](../xsd/VerwerkingsmeldingArbo-verz.xsd) |
-| Namespace | `http://www.ec-design.nl/SIVI/SDM/0.2/structures/VerwerkingsmeldingArbo-verz2` |
-| Versie | 00.00 |
+| Namespace | `http://www.sivi.org/Verzuimmanagement/VerwerkingsmeldingArbodienstVerzekeraar/2026` |
+| Versie | 2026.0 |
 | Elementen | 24 |
 
 Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchie; de volledige toelichting per element staat in de PDF bij de release.
@@ -15,7 +15,7 @@ Deze pagina is afgeleid van de XSD. De namen komen uit de functionele hiërarchi
 
 | XML-tag | Naam | Voorkomen | Formaat | Toegestane waarden |
 |---|---|---|---|---|
-| **`Message`** |  | 1..1 | groep |  |
+| **`VerwerkingsmeldingArbodienstVerzekeraar`** |  | 1..1 | groep |  |
 | &emsp;**`BrAlg`** | Bericht algemeen | 1..1 | groep |  |
 | &emsp;&emsp;`BrCd` | Bericht, code | 1..1 | an..5 | 00901 |
 | &emsp;&emsp;`VnrBrCd` | Versienummer bericht, code | 1..1 | an..5 | 00001 |
